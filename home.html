@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
+	<title>
+		Toronet Blockchain Explorer
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="Description"
+		content="Toronet Explorer allows you to explore and search the Toronet blockchain for transactions, addresses, tokens, prices and other activities taking place on Toronet network">
+	<meta name="author" content="TestExplorer.Toronet.org">
+	<meta name="keywords" content="Toronet, explorer, Toro, ETH, BNB, BTC, search, blockchain, crypto, currency">
+	<meta name="format-detection" content="telephone=no">
+	<meta property="og:title" content=" Toronet Blockchain Explorer">
+	<meta property="og:description"
+		content="Toronet Explorer allows you to explore and search the Toronet blockchain for transactions, addresses, tokens, prices and other activities taking place on Toronet network">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Toronet Blockchain Explorer">
+	<meta property="og:url" content="//testexplorer.toronet.org/">
+	<meta property="og:image" content="./images/toro-logo.png">
+	<meta property="og:image:alt" content="Visit Toronet.org">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content=" Toronet Blockchain Explorer">
+	<meta property="twitter:description"
+		content="Toronet Explorer allows you to explore and search the Toronet blockchain for transactions, addresses, tokens, prices and other activities taking place on Toronet network">
+	<meta name="twitter:site" content="@Toronet">
+	<meta property="twitter:image" content=./images/toro-logo.png">
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<script type="text/javascript" async="" src="./home_files/analytics.js.download"></script>
+	<script async="" src="./home_files/js"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-46998878-23');
+	</script>
+	<script>
+		//Search box text ad
+		//var availableAd = [];
+		//var gotAd = [];
+
+
+		availableAd = [""];
+		gotAd = ["ShowAds					"];
+
+	</script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="./home_files/animate.min.css">
+	<link rel="stylesheet" href="./home_files/hs.megamenu.css">
+	<link rel="stylesheet" href="./home_files/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="./home_files/select2.min.css">
+	<link rel="stylesheet" href="./home_files/theme.min.css">
+	<link rel="stylesheet" href="./home_files/custom.css">
+	<script src="./home_files/jquery.min.js.download"></script>
+	<script type="text/javascript" src="./home_files/blockies.js.download"></script>
+	<style>
+		.ui-autocomplete {
+			position: absolute;
+			top: 0;
+			left: 0;
+			cursor: default
+		}
+
+		.ui-state-active {
+			border-color: #e7eaf3;
+			background: #f8fafd;
+		}
+
+		body.dark-mode .ui-state-active {
+			background-color: #252525;
+			border-color: #323232;
+		}
+	</style>
+	<style type="text/css">
+		#div-advert {
+			line-height: 1.7
+		}
+
+		@media (max-width: 667px) {
+			#div-advert {
+				min-height: 62px;
+			}
+		}
+
+		@media (max-width: 767px) {
+			#div-advert {
+				padding-bottom: 20px;
+			}
+		}
+	</style>
+	<style>
+		.wrapper {
+			background-color: #fff !important;
+		}
+
+		.ui-autocomplete {
+			z-index: 1;
+		}
+
+		.nav-link::before,
+		.nav-link::after {
+			content: none !important;
+		}
+	</style>
+	<script src="./home_files/jquery.mousewheel.min.js.download"></script>
+</head>
+
+<body id="body">
+	<div class="wrapper">
+
+		<!-- HEADER -->
+		<header id="header" class="u-header">
+			<div class="u-header__section py-1">
+				<div id="logoAndNav" class="container">
+					<nav
+						class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space hs-menu-initialized hs-menu-horizontal">
+						<div class="w-lg-auto">
+							<a class="navbar-brand  pt-md-0" href="#" target="_parent" aria-label="BscScan">
+								<img id="logo-header" width="160" src="./images/toro-updated.png" alt="Toro Logo">
+							</a>
+						</div>
+
+						<!-- MENU -->
+						<div>
+							<button type="button" class="navbar-toggler btn u-hamburger" aria-label="Toggle navigation"
+								aria-expanded="false" aria-controls="navBar" data-toggle="collapse"
+								data-target="#navBar">
+								<span id="hamburgerTrigger" class="u-hamburger__box">
+									<span class="u-hamburger__inner"></span>
+								</span>
+							</button>
+						</div>
+						<div class="d-flex flex-column w-100">
+							<div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse order-md-2">
+								<ul class="navbar-nav u-header__navbar-nav px-2 px-md-0">
+									<li id="LI_default" class="nav-item u-header__nav-item active" data-event="hover"
+										data-animation-in="slideInUp" data-animation-out="fadeOut">
+										<a class="nav-link u-header__nav-link" href="./home.html" aria-haspopup="true"
+											aria-expanded="false" aria-labelledby="pagesSubMenu">Home</a>
+									</li>
+									<li id="LI_blockchain" class="nav-item hs-has-sub-menu u-header__nav-item"
+										data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+										<a id="blockchainMegaMenu"
+											class="nav-link u-header__nav-link u-header__nav-link-toggle"
+											href="javascript:;" aria-haspopup="true" aria-expanded="false"
+											aria-labelledby="pagesSubMenu">Blockchain</a>
+										<ul id="blockchainSubMenu"
+											class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer"
+											aria-labelledby="blockchainMegaMenu"
+											style="min-width: 230px; display: none;">
+											<!--
+<li id="LI_accountall"><a href="./accounts.html" class="nav-link u-header__sub-menu-nav-link">Top Accounts</a></li>
+<li class="dropdown-divider"></li>
+-->
+											<li id="LI12"><a href="./txs.html"
+													class="nav-link u-header__sub-menu-nav-link">View All Txns</a></li>
+											<li id="LI14"><a href="./txs_toros.html"
+													class="nav-link u-header__sub-menu-nav-link">View Toro Txns</a></li>
+											<li class="dropdown-divider"></li>
+											<li id="LI14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size=2>StableCoin Txns
+												</font>
+											</li>
+											<li id="LI14"><a href="./txs_egps.html"
+													class="nav-link u-header__sub-menu-nav-link">View τEGP Txns</a></li>
+											<li id="LI14"><a href="./txs_kshs.html"
+													class="nav-link u-header__sub-menu-nav-link">View τKSH Txns</a></li>
+											<li id="LI14"><a href="./txs_nairas.html"
+													class="nav-link u-header__sub-menu-nav-link">View τNGN Txns</a></li>
+											<li id="LI14"><a href="./txs_zars.html"
+													class="nav-link u-header__sub-menu-nav-link">View τZAR Txns</a></li>
+											<li id="LI14"><a href="./txs_euros.html"
+													class="nav-link u-header__sub-menu-nav-link">View τEURO Txns</a>
+											</li>
+											<li id="LI14"><a href="./txs_pounds.html"
+													class="nav-link u-header__sub-menu-nav-link">View τPOUND Txns</a>
+											</li>
+											<li id="LI14"><a href="./txs_dollars.html"
+													class="nav-link u-header__sub-menu-nav-link">View τUSD Txns</a></li>
+											<li class="dropdown-divider"></li>
+											<li id="LI14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size=2>Tokens</font>
+											</li>
+											<li id="LI14"><a href="./txs_espees.html"
+													class="nav-link u-header__sub-menu-nav-link">View ESPEES Txns</a>
+											</li>
+											<li id="LI14"><a href="./txs_plasts.html"
+													class="nav-link u-header__sub-menu-nav-link">View PLASTOKEN Txns</a>
+											</li>
+											<li class="dropdown-divider"></li>
+											<li id="LI14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size=2>Crypto Txns</font>
+											</li>
+											<li id="LI14"><a href="./txs_eths.html"
+													class="nav-link u-header__sub-menu-nav-link">View τETH Txns</a></li>
+											<li class="dropdown-divider"></li>
+											<li id="LI_blocks">
+												<a id="navBlocks" class="nav-link u-header__sub-menu-nav-link"
+													href="./blocks.html" aria-haspopup="true" aria-expanded="false"
+													aria-controls="navSubBlocks">View Blocks</a>
+											</li>
+
+											<li class="divider"></li>
+											<li class="dropdown-divider"></li>
+											<li id="LI_contract_verified"><a href="https://www.toronet.org"
+													class="nav-link u-header__sub-menu-nav-link">Go to Toro Website</a>
+											</li>
+										</ul>
+									</li>
+									<li id="LI_validators" class="nav-item hs-has-sub-menu u-header__nav-item"
+										data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+										<a id="validatorMegaMenu"
+											class="nav-link u-header__nav-link u-header__nav-link-toggle"
+											href="javascript:;" aria-haspopup="true" aria-expanded="false"
+											aria-labelledby="validatorSubMenu">Nodes</a>
+										<ul id="validatorSubMenu"
+											class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer"
+											aria-labelledby="validatorMegaMenu"
+											style="min-width: 230px; display: none;">
+											<li id="LI4"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./nodes.html">Toronet Nodes</a></li>
+										</ul>
+									</li>
+									<li id="LI_Tokens" class="nav-item hs-has-sub-menu u-header__nav-item"
+										data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+										<a id="testTokensMegaMenu"
+											class="nav-link u-header__nav-link u-header__nav-link-toggle"
+											href="javascript:;" aria-haspopup="true" aria-expanded="false"
+											aria-labelledby="testTokensSubMenu">Tokens</a>
+										<ul id="testTokensSubMenu"
+											class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer"
+											aria-labelledby="testTokensMegaMenu"
+											style="min-width: 230px; display: none;">
+											<li id="LI18"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./torotokens.html">Tọ̀rọ̀ Tokens</a></li>
+
+											<li class="dropdown-divider"></li>
+											<li id="LI42"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./fiat-tokens.html">Fiat StableCoins</a></li>
+											<li id="LI40"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./crypto-tokens.html">Crypto StableCoins</a></li>
+											<li class="dropdown-divider"></li>
+											<li id="LI18"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./tokens.html">Tokens</a></li>
+											<li class="dropdown-divider"></li>
+											<li id="LI42"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./reserves.html">Reserves</a></li>
+											<li id="LI42"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./ratesandfees.html">Rates & Fees</a></li>
+											<li id="LI42"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./commissions.html">Commissions</a></li>
+
+										</ul>
+									</li>
+									<li id="LI_resources" class="nav-item hs-has-sub-menu u-header__nav-item"
+										data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+										<a id="resourcesMegaMenu"
+											class="nav-link u-header__nav-link u-header__nav-link-toggle"
+											href="javascript:;" aria-haspopup="true" aria-expanded="false"
+											aria-labelledby="resourcesSubMenu">Resources</a>
+										<ul id="resourcesSubMenu"
+											class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer animated fadeOut"
+											aria-labelledby="resourcesMegaMenu"
+											style="min-width: 230px; display: none;">
+											<li id="LI_charts2"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./wallets.html">Wallets</a></li>
+											<li id="LI_charts2"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./wallets.html">Exchanges</a></li>
+											<li id="LI_charts2"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./charts.html">Charts &amp; Stats</a></li>
+											<!--
+<li id="LI_topstat"><a class="nav-link u-header__sub-menu-nav-link" href="./topstat.html">Top Statistics</a></li>
+-->
+										</ul>
+									</li>
+									<li id="LI_Misc" class="nav-item hs-has-sub-menu u-header__nav-item my-md-n1"
+										data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+										<a id="testMiscMegaMenu"
+											class="nav-link u-header__nav-link u-header__nav-link-toggle"
+											href="javascript:;" aria-haspopup="true" aria-expanded="false"
+											aria-labelledby="testMiscSubMenu">Misc</a>
+										<ul id="testMiscSubMenu"
+											class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer"
+											aria-labelledby="testMiscMegaMenu" style="min-width: 215px; display: none;">
+											<li id="LI11"><a class="nav-link u-header__sub-menu-nav-link"
+													href="./apis.html">APIs</a></li>
+											<!--
+<li id="LI50"><a class="nav-link u-header__sub-menu-nav-link" href="./unitconverter.html">Unit Converter <sup><span class="badge badge-success font-size-default ml-1"> New</span></sup></a></li>
+-->
+										</ul>
+									</li>
+									<li class="u-header__nav-separator"></li>
+									<li class="nav-item my-2 my-md-0">
+										<a class="u-header__nav-link" href="https://testnet.toronet.org/wallet/">
+											<i class="fa fa-user-circle mr-1"></i>Get Toros
+										</a>
+									</li>
+									<li class="u-header__nav-separator"></li>
+									<li class="nav-item hs-has-sub-menu u-header__nav-item my-md-n1" data-event="hover"
+										data-animation-in="slideInUp" data-animation-out="fadeOut">
+										<a id="explorersWithDropdown"
+											class="nav-link u-header__nav-link u-header__nav-link-toggle u-header__nav-link-toggle--mobile pr-0"
+											href="javascript:;" aria-haspopup="true" aria-expanded="false"
+											aria-labelledby="explorersDropdown">
+											<span
+												class="btn btn-sm btn-icon btn-soft-primary cursor-pointer d-none d-md-inline-block">
+												<img class="u-xs-avatar btn-icon__inner"
+													src="./images/toro-logo-small.png" alt="Toro Logo Small">
+											</span>
+											<span class="d-inline-block d-md-none">Explorers</span>
+										</a>
+										<ul id="explorersDropdown"
+											class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer dropdown-menu-md-right animated fadeOut"
+											aria-labelledby="explorersWithDropdown"
+											style="min-width: 130px; display: none;">
+											<li id="LI_Mainnet"><a class="nav-link u-header__sub-menu-nav-link"
+													href="https://toronet.org/explorer/">Mainnet</a></li>
+											<li id="LI_testnet"><a class="nav-link u-header__sub-menu-nav-link"
+													href="https://testnet.toronet.org/">Testnet</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<!-- END MENU -->
+
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!-- END HEADER -->
+		<!-- ============================================================================================================================================= -->
+
+
+		<main id="content" role="main">
+			<input type="hidden" name="hdnAgeText" id="hdnAgeText" value="Age">
+			<input type="hidden" name="hdnDateTimeText" id="hdnDateTimeText" value="Date Time (UTC)">
+			<input type="hidden" name="hdnAgeTitle" id="hdnAgeTitle" value="Click to show Age Format">
+			<input type="hidden" name="hdnDateTimeTitle" id="hdnDateTimeTitle" value="Click to show Datetime Format">
+			<section class="bg-dark" style="background-color:#114E15">
+				<div class="container space-top-2 space-bottom-3">
+
+					<div class="row justify-content-between align-items-center mb-4">
+						<div class="col-md-12 col-lg-7">
+							<div class="pr-lg-4 pr-xll-5">
+								<h1 class="h4 mb-3" style="color:#FBDA3C">
+									Toronet BlockChain Explorer - TestNet
+								</h1>
+								<form class="mb-3" action="#" method="GET">
+									<div class="input-group input-group-shadow">
+										<div class="input-group-prepend d-none d-md-block">
+
+											<select name="f"
+												class="custom-select custom-arrow-select input-group-text font-size-base filterby">
+												<option selected="" value="0">All Filters</option>
+												<option value="1">Addresses</option>
+												<option value="2">Tokens</option>
+												<option value="3">Name Tags</option>
+												<option value="4">Labels</option>
+												<option value="5">Websites</option>
+											</select>
+
+										</div>
+										<input id="txtSearchInput" type="text"
+											class="form-control searchautocomplete ui-autocomplete-input list-unstyled py-3 mb-0"
+											placeholder="Search by Address / Txn Hash / Block / Token"
+											aria-describedby="button-header-search" name="q"
+											onkeyup="handleSearchText(this);" autocomplete="off">
+										<input type="hidden" value="" id="hdnSearchText">
+										<input id="hdnIsTestNet" value="False" type="hidden">
+										<div class="input-group-append">
+											<button class="btn btn-primary" type="submit">
+												<img src="./images/search_small.png" heignt=20
+													style="width: 20px; height:20px;">
+											</button>
+										</div>
+									</div>
+								</form>
+
+								<p class="text-white-70 mb-0" style="min-height:22px">
+									<ins data-revive-zoneid="1" data-revive-id="d2636ef8c49e3f153802edf66c0e240f"
+										data-revive-seq="0" id="revive-0-0" data-revive-loaded="1"
+										style="text-decoration: none;"><b> Toronet Explorer</b> - Enter a blockchain
+										address, transaction, currency, or block here<div id="beacon_5e54534e50"
+											style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img
+												src="./home_files/lg.php" width="0" height="0" alt=""
+												style="width: 0px; height: 0px;"></div></ins>
+								</p>
+
+							</div>
+						</div>
+						<div class="col-12 col-lg-5">
+
+							<div class="d-none d-lg-block text-center pl-lg-4 pl-xll-5">
+
+
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- ============================================================================================================================================= -->
+
+
+			<div class="container space-bottom-1 mt-n5">
+
+				<div id="ContentPlaceHolder1_mainboxes" class="card mb-4">
+					<div class="card-body">
+						<div class="row mx-gutters-md-1">
+							<div class="col-md-6 col-lg-4">
+								<div class="media align-items-center">
+									<figure class="u-sm-avatar mr-2">
+										<div class="u-xs-avatar mx-auto">
+											<img src="./home_files/bnb-1.svg" alt="TORO">
+										</div>
+									</figure>
+									<div class="media-body">
+										<h2 class="font-size-1 text-uppercase text-secondary mb-0">TORO Price</h2>
+
+										<!-- CONTENT TORO PRICE -->
+										<a class="text-size-1 text-link" href="#" rel="tooltip" data-toggle="tooltip"
+											data-placement="bottom" title=""
+											data-original-title="View Historical TORO Price">$1.00<span
+												class="text-secondary"> @ 1.00 TORO/USD</span>
+											<span class="text-success small"> (+0.00%)</span></a>
+										<!-- END CONTENT -->
+
+									</div>
+								</div>
+								<hr class="hr-space-lg">
+								<div class="media align-items-center">
+									<figure class="u-sm-avatar mr-2">
+										<img src="./home_files/icon-8.svg" alt="Market Cap">
+									</figure>
+									<div class="media-body">
+										<h2 class="font-size-1 text-uppercase text-secondary mb-0">TOROS in Reserve
+										</h2>
+
+										<!-- CONTENT TORO RESERVE -->
+										<div id="toros_in_reserve">
+											<a class="text-size-1 text-link" href="./tokens.html" rel="tooltip"
+												data-placement="bottom"
+												title="Market cap of TORO on ToroNet, click to Learn More"
+												id="reserve_in_usd">Loading...</span></a>
+										</div>
+										<!-- END CONTENT -->
+
+									</div>
+								</div>
+								<hr class="d-block d-md-none hr-space-lg">
+							</div>
+							<div class="col-md-6 col-lg-4 u-ver-divider u-ver-divider--left u-ver-divider--none-md">
+								<div class="media align-items-center">
+									<figure class="u-sm-avatar mr-2">
+										<img src="./home_files/icon-2-1.svg" alt="Network Difficulty">
+									</figure>
+									<div class="media-body">
+										<h2 class="font-size-1 text-uppercase text-secondary mb-0">Latest Block</h2>
+
+										<!-- CONTENT LATEST PRICE -->
+										<a class="text-size-1 text-link" ./blocks.html" rel="tooltip"
+											data-placement="bottom" title="The latest Block No">
+											<span id="lastblock">Loading...</span></a>
+										<!-- END CONTENT -->
+
+										<a data-toggle="tooltip" href="#" class="small text-secondary  text-link"
+											data-placement="right"
+											data-title="Average Block Time (The latest 5000 blocks)"
+											data-original-title="" title="">(<span id="avgblocktime">2.0s</span>)</a>
+									</div>
+									<div class="text-right">
+										<h2 class="font-size-1 text-uppercase text-secondary mb-0">Transactions</h2>
+
+										<!-- CONTENT TRANSACTION STATISTICS -->
+										<a href="./txs.html" class="text-size-1 text-link" rel="tooltip"
+											data-toggle="tooltip" data-placement="left" data-html="true" title=""
+											data-original-title="Total Transactions Counter&lt;br&gt;(Update every 2 mins)"><span
+												id="total_transactions">89,548</span></a>
+										<!-- <span class="text-secondary small" rel="tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Transactions per Second"> (3657 TPS)</span> -->
+										<!-- END CONTENT -->
+
+									</div>
+								</div>
+								<hr class="hr-space-lg">
+								<div class="media align-items-center">
+									<figure class="u-sm-avatar mr-2">
+										<img src="./home_files/icon-51.svg" alt="SVG">
+									</figure>
+									<div class="media-body">
+										<h2 class="font-size-1 text-uppercase text-secondary mb-0">Active Nodes</h2>
+										<a class="text-size-1 text-link" data-toggle="tooltip" data-placement="left"
+											data-title="View Difficulty Growth Chart" href="#" data-original-title=""
+											title=""></a>
+
+										<!-- CONTENT VALIDATOR STATISTICS -->
+										<a class="text-size-1 text-link" href="./nodes.html" rel="tooltip"
+											data-placement="bottom" title="Total Active Validator"><span
+												id="active_nodes">4</span></a>
+									</div>
+									<div class="text-right">
+										<h2 class="font-size-1 text-uppercase text-secondary mb-0">Toros in Circulation
+										</h2>
+										<a class="text-size-1 text-link" href./chart/hashrate">
+										</a><a class="text-size-1 text-link" href="./nodes.html"><span
+												id="circulating_toros">Loading...</span></a>
+										<!-- END CONTENT -->
+
+									</div>
+								</div>
+								<hr class="d-block d-md-none hr-space-lg">
+							</div>
+							<div class="col-md-12 col-lg-4 u-ver-divider u-ver-divider--left u-ver-divider--none-lg">
+								<hr class="d-none d-md-block d-lg-none my-4">
+								<div class="d-flex justify-content-between align-items-center">
+									<h2 class="font-size-1 text-uppercase text-secondary mb-0">TORO TRANSACTION HISTORY
+										LAST 14 DAYS</h2>
+									<div class="position-relative float-right z-index-2">
+										<a id="customchartsinvoker" class="btn btn-xs btn-icon btn-soft-secondary"
+											href="javascript:;" role="button" aria-controls="customcharts"
+											aria-haspopup="true" aria-expanded="false" data-unfold-event="click"
+											data-unfold-target="#customcharts" data-unfold-type="css-animation"
+											data-unfold-duration="300" data-unfold-delay="300"
+											data-unfold-hide-on-scroll="true" data-unfold-animation-in="slideInUp"
+											data-unfold-animation-out="fadeOut">
+											<i class="fa fa-ellipsis-v btn-icon__inner"></i>
+										</a>
+										<div id="customcharts"
+											class="dropdown-menu dropdown-menu-right dropdown-unfold u-unfold--css-animation u-unfold--hidden fadeOut"
+											aria-labelledby="customchartsinvoker" style="animation-duration: 300ms;">
+											<a class="dropdown-item" href="#">View Detailed Chart</a>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div id="container-1" class="" style="height: 106px;" data-highcharts-chart="0">
+										<div id="highcharts-n3r9cbm-0" dir="ltr" class="highcharts-container "
+											style="position: relative; overflow: hidden; width: 416px; height: 106px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+											<svg version="1.1" class="highcharts-root"
+												style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif; font-size: 12px;"
+												xmlns="//www.w3.org/2000/svg" width="416" height="106"
+												viewBox="0 0 416 106">
+												<!-- CONTENT CHART -->
+
+												<desc>Created with Highcharts 6.1.4</desc>
+												<defs>
+													<clippath id="highcharts-n3r9cbm-1">
+														<rect x="0" y="0" width="367" height="74" fill="none"></rect>
+													</clippath>
+												</defs>
+												<rect fill="#ffffff" class="highcharts-background" x="0" y="0"
+													width="416" height="106" rx="0" ry="0"></rect>
+												<rect fill="none" class="highcharts-plot-background" x="39" y="10"
+													width="367" height="74"></rect>
+												<g class="highcharts-grid highcharts-xaxis-grid " data-z-index="1">
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 62.5 10 L 62.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 87.5 10 L 87.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 111.5 10 L 111.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 136.5 10 L 136.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 160.5 10 L 160.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 185.5 10 L 185.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 209.5 10 L 209.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 234.5 10 L 234.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 258.5 10 L 258.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 283.5 10 L 283.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 307.5 10 L 307.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 332.5 10 L 332.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 356.5 10 L 356.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 381.5 10 L 381.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 405.5 10 L 405.5 84" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 38.5 10 L 38.5 84" opacity="1"></path>
+												</g>
+
+												<g class="highcharts-grid highcharts-yaxis-grid " data-z-index="1">
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 39 84.5 L 406 84.5" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 39 47.5 L 406 47.5" opacity="1"></path>
+													<path fill="none" data-z-index="1" class="highcharts-grid-line"
+														d="M 39 10.5 L 406 10.5" opacity="1"></path>
+												</g>
+												<rect fill="none" class="highcharts-plot-border" data-z-index="1" x="39"
+													y="10" width="367" height="74"></rect>
+												<g class="highcharts-axis highcharts-xaxis " data-z-index="2">
+													<path fill="none" class="highcharts-axis-line" data-z-index="7"
+														d="M 39 84 L 406 84"></path>
+												</g>
+												<g class="highcharts-axis highcharts-yaxis " data-z-index="2">
+													<path fill="none" class="highcharts-axis-line" data-z-index="7"
+														d="M 39 10 L 39 84"></path>
+												</g>
+												<g class="highcharts-series-group" data-z-index="3">
+													<g data-z-index="0.1"
+														class="highcharts-series highcharts-series-0 highcharts-spline-series "
+														transform="translate(39,10) scale(1 1)"
+														clip-path="url(#highcharts-n3r9cbm-1)">
+														<path fill="none"
+															d="M 12.233333333333 28.646184399999996 C 12.233333333333 28.646184399999996 26.913333333333203 25.463160239999997 36.7 22.8062968 C 46.48666666666681 20.14943336 51.3800000000002 17.209758200000003 61.166666666667 15.361867199999999 C 70.9533333333334 13.513976199999995 75.84666666666661 13.513976199999995 85.633333333333 13.513976199999995 C 95.4199999999998 13.513976199999995 100.31333333333319 28.30670792000032 110.1 33.685406799999996 C 119.88666666666799 39.064105680000324 124.78000000000198 40.407470599999996 134.56666666667 40.407470599999996 C 144.35333333333398 40.407470599999996 149.246666666666 38.4602642 159.03333333333 38.4602642 C 168.819999999998 38.4602642 173.713333333332 40.79444324 183.5 41.830608999999995 C 193.286666666668 42.86677476 198.180000000002 43.136377479999894 207.96666666667 43.641093 C 217.753333333334 44.145808519999896 222.646666666666 44.16148764000003 232.43333333333 44.3541866 C 242.21999999999798 44.546885560000035 247.113333333332 44.3541866 256.9 44.6045878 C 266.686666666668 44.854988999999996 271.58000000000203 49.3459084 281.36666666667 49.4434404 C 291.153333333334 49.5409724 296.046666666666 49.5409724 305.83333333333 49.5409724 C 315.61999999999796 49.5409724 320.51333333333207 47.300171 330.3 47.300171 C 340.08666666666807 47.300171 354.76666666667 49.236092400000004 354.76666666667 49.236092400000004"
+															class="highcharts-graph" data-z-index="1" stroke="#1e2022"
+															stroke-width="1" stroke-linejoin="round"
+															stroke-linecap="round">
+														</path>
+														<path fill="none"
+															d="M 2.2333333333330003 28.646184399999996 L 12.233333333333 28.646184399999996 C 12.233333333333 28.646184399999996 26.913333333333203 25.463160239999997 36.7 22.8062968 C 46.48666666666681 20.14943336 51.3800000000002 17.209758200000003 61.166666666667 15.361867199999999 C 70.9533333333334 13.513976199999995 75.84666666666661 13.513976199999995 85.633333333333 13.513976199999995 C 95.4199999999998 13.513976199999995 100.31333333333319 28.30670792000032 110.1 33.685406799999996 C 119.88666666666799 39.064105680000324 124.78000000000198 40.407470599999996 134.56666666667 40.407470599999996 C 144.35333333333398 40.407470599999996 149.246666666666 38.4602642 159.03333333333 38.4602642 C 168.819999999998 38.4602642 173.713333333332 40.79444324 183.5 41.830608999999995 C 193.286666666668 42.86677476 198.180000000002 43.136377479999894 207.96666666667 43.641093 C 217.753333333334 44.145808519999896 222.646666666666 44.16148764000003 232.43333333333 44.3541866 C 242.21999999999798 44.546885560000035 247.113333333332 44.3541866 256.9 44.6045878 C 266.686666666668 44.854988999999996 271.58000000000203 49.3459084 281.36666666667 49.4434404 C 291.153333333334 49.5409724 296.046666666666 49.5409724 305.83333333333 49.5409724 C 315.61999999999796 49.5409724 320.51333333333207 47.300171 330.3 47.300171 C 340.08666666666807 47.300171 354.76666666667 49.236092400000004 354.76666666667 49.236092400000004 L 364.76666666667 49.236092400000004"
+															stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)"
+															stroke-width="21" visibility="visible" data-z-index="2"
+															class="highcharts-tracker-line" style="cursor:pointer;">
+														</path>
+													</g>
+													<g data-z-index="0.1"
+														class="highcharts-markers highcharts-series-0 highcharts-spline-series highcharts-tracker "
+														transform="translate(39,10) scale(1 1)" style="cursor:pointer;"
+														clip-path="none">
+														<path fill="#1e2022" visibility="hidden"
+															d="M 12 28.646184399999996 A 0 0 0 1 1 12 28.646184399999996 Z"
+															class="highcharts-halo highcharts-color-undefined"
+															data-z-index="-1" fill-opacity="0.25"></path>
+														<path fill="#1e2022"
+															d="M 14 28.646184399999996 A 2 2 0 1 1 13.999999000000084 28.644184400333327 Z"
+															stroke="#ffffff" stroke-width="1" visibility="hidden">
+														</path>
+													</g>
+												</g>
+												<text x="0" text-anchor="start" class="highcharts-title"
+													data-z-index="4" style="color:#333333;font-size:18px;fill:#333333;"
+													y="24"></text>
+												<text x="203" text-anchor="middle" class="highcharts-subtitle"
+													data-z-index="4" style="color:#666666;fill:#666666;" y="24"></text>
+												<g class="highcharts-axis-labels highcharts-xaxis-labels "
+													data-z-index="7">
+													<text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999"
+														opacity="1">
+														<tspan>Aug 18</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 19</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 20</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 21</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 22</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 23</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 24</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999"
+														opacity="1">
+														<tspan>Aug 25</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 26</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 27</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 28</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 29</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 30</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999">
+														<tspan>Aug 31</tspan>
+													</text><text x="0"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="middle" transform="translate(0,0)" y="-9999"
+														opacity="1">
+														<tspan>Aug 31</tspan>
+													</text>
+												</g>
+												<g class="highcharts-axis-labels highcharts-yaxis-labels "
+													data-z-index="7">
+													<text x="24"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="end" transform="translate(0,0)" y="88"
+														opacity="1">5</text>
+													<text x="24"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="end" transform="translate(0,0)" y="51"
+														opacity="1">10</text>
+													<text x="24"
+														style="color:#666666;cursor:default;font-size:11px;fill:#666666;"
+														text-anchor="end" transform="translate(0,0)" y="14"
+														opacity="1">15</text>
+												</g>
+												<g class="highcharts-label highcharts-tooltip highcharts-color-undefined"
+													style="pointer-events:none;white-space:nowrap;" data-z-index="8"
+													transform="translate(1,-9999)" opacity="0" visibility="visible">
+													<path fill="none"
+														class="highcharts-label-box highcharts-tooltip-box highcharts-shadow"
+														d="M 3.5 0.5 L 43.5 0.5 49.5 -5.5 55.5 0.5 167 0.5 C 170.5 0.5 170.5 0.5 170.5 3.5 L 170.5 45.5 C 170.5 48.5 170.5 48.5 167.5 48.5 L 3.5 48.5 C 0.5 48.5 0.5 48.5 0.5 45.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+														stroke="#000000" stroke-opacity="0.049999999999999996"
+														stroke-width="5" transform="translate(1, 1)"></path>
+													<path fill="none"
+														class="highcharts-label-box highcharts-tooltip-box highcharts-shadow"
+														d="M 3.5 0.5 L 43.5 0.5 49.5 -5.5 55.5 0.5 167 0.5 C 170.5 0.5 170.5 0.5 170.5 3.5 L 170.5 45.5 C 170.5 48.5 170.5 48.5 167.5 48.5 L 3.5 48.5 C 0.5 48.5 0.5 48.5 0.5 45.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+														stroke="#000000" stroke-opacity="0.09999999999999999"
+														stroke-width="3" transform="translate(1, 1)"></path>
+													<path fill="none"
+														class="highcharts-label-box highcharts-tooltip-box highcharts-shadow"
+														d="M 3.5 0.5 L 43.5 0.5 49.5 -5.5 55.5 0.5 167 0.5 C 170.5 0.5 170.5 0.5 170.5 3.5 L 170.5 45.5 C 170.5 48.5 170.5 48.5 167.5 48.5 L 3.5 48.5 C 0.5 48.5 0.5 48.5 0.5 45.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+														stroke="#000000" stroke-opacity="0.15" stroke-width="1"
+														transform="translate(1, 1)"></path>
+													<path fill="rgba(247,247,247,0.85)"
+														class="highcharts-label-box highcharts-tooltip-box"
+														d="M 3.5 0.5 L 43.5 0.5 49.5 -5.5 55.5 0.5 167 0.5 C 170.5 0.5 170.5 0.5 170.5 3.5 L 170.5 45.5 C 170.5 48.5 170.5 48.5 167.5 48.5 L 3.5 48.5 C 0.5 48.5 0.5 48.5 0.5 45.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+														stroke="#1e2022" stroke-width="1"></path>
+													<text x="8" data-z-index="1"
+														style="font-size:12px;color:#333333;cursor:default;fill:#333333;"
+														y="20">
+														<tspan style="font-size:10px">Loading...</tspan>
+														<tspan style="fill:#1e2022" x="8" dy="15">Transactions: </tspan>
+														<tspan style="font-weight:bold" dx="0">0</tspan>
+													</text>
+												</g>
+											</svg>
+										</div>
+									</div>
+									<!-- END CONTENT -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ============================================================================================================================================= -->
+
+
+
+
+
+				<div class="row mb-5">
+
+					<div class="col-lg-6 mb-4 mb-lg-0">
+						<div class="card h-100">
+
+							<div class="card-header">
+								<h2 class="card-header-title">Latest Blocks</h2>
+							</div>
+
+
+							<div class="js-scrollbar card-body overflow-hidden mCustomScrollbar _mCS_1 mCS-autoHide"
+								style="height: 930px; position: relative; overflow: hidden;">
+								<div id="mCSB_1" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
+									style="max-height: none;" tabindex="0">
+									<div id="mCSB_1_container" class="mCSB_container"
+										style="position:relative; top:0; left:0;" dir="ltr">
+										<!-- CONTENT: BLOCK LIST -->
+										<!--
+					<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary"><span class="btn-icon__inner text-dark">Bk</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none">Block</span> <a href="./block.html?block=9901164">9901166</a><span class="d-sm-block small text-secondary ml-1 ml-sm-0 text-nowrap"> 9 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-flex justify-content-between"><div class="text-nowrap"><span class="d-block mb-1 mb-sm-0">Validated By <a class="hash-tag text-truncate" href="./address.html?address=0x29a97c6effb8a411dabc6adeefaa84f5067c8bbe">Node: ToroCorp</a></span><a href="./txs.html?block=9901166" data-toggle="tooltip" title="" data-original-title="Transactions in this Block">306 txns </a> <span class="small text-secondary">in 3 secs</span><span class="d-inline-block d-sm-none"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.24479 TORO</span></span></div><div class="d-none d-sm-block"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.24479 TORO</span></div></div></div></div>
+					<hr class="hr-space">
+					<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary"><span class="btn-icon__inner text-dark">Bk</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none">Block</span> <a href="./block.html?block=9901164">9901165</a><span class="d-sm-block small text-secondary ml-1 ml-sm-0 text-nowrap"> 13 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-flex justify-content-between"><div class="text-nowrap"><span class="d-block mb-1 mb-sm-0">Validated By <a class="hash-tag text-truncate" href="./address.html?address=0x295e26495cef6f69dfa69911d9d8e4f3bbadb89b">Node: ToroCorp</a></span><a href="./txs.html?block=9901165" data-toggle="tooltip" title="" data-original-title="Transactions in this Block">239 txns </a> <span class="small text-secondary">in 3 secs</span><span class="d-inline-block d-sm-none"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.23296 TORO</span></span></div><div class="d-none d-sm-block"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.23296 TORO</span></div></div></div></div>
+					<hr class="hr-space">
+					<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary"><span class="btn-icon__inner text-dark">Bk</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none">Block</span> <a href="./block.html?block=9901164">9901164</a><span class="d-sm-block small text-secondary ml-1 ml-sm-0 text-nowrap"> 16 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-flex justify-content-between"><div class="text-nowrap"><span class="d-block mb-1 mb-sm-0">Validated By <a class="hash-tag text-truncate" href="./address.html?address=0x2465176c461afb316ebc773c61faee85a6515daa">Node: MoneyWorx</a></span><a href="./txs.html?block=9901164" data-toggle="tooltip" title="" data-original-title="Transactions in this Block">253 txns </a> <span class="small text-secondary">in 3 secs</span><span class="d-inline-block d-sm-none"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.19872 TORO</span></span></div><div class="d-none d-sm-block"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.19872 TORO</span></div></div></div></div>
+					<hr class="hr-space">
+					<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary"><span class="btn-icon__inner text-dark">Bk</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none">Block</span> <a href="./block.html?block=9901163">9901163</a><span class="d-sm-block small text-secondary ml-1 ml-sm-0 text-nowrap"> 19 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-flex justify-content-between"><div class="text-nowrap"><span class="d-block mb-1 mb-sm-0">Validated By <a class="hash-tag text-truncate" href="./address.html?address=0xee226379db83cffc681495730c11fdde79ba4c0c">Node: ToroCorp</a></span><a href="./txs.html?block=9901163" data-toggle="tooltip" title="" data-original-title="Transactions in this Block">370 txns </a> <span class="small text-secondary">in 3 secs</span><span class="d-inline-block d-sm-none"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.33819 TORO</span></span></div><div class="d-none d-sm-block"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.33819 TORO</span></div></div></div></div>
+					<hr class="hr-space">
+					<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary"><span class="btn-icon__inner text-dark">Bk</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none">Block</span> <a href="./block.html?block=9901162">9901162</a><span class="d-sm-block small text-secondary ml-1 ml-sm-0 text-nowrap"> 22 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-flex justify-content-between"><div class="text-nowrap"><span class="d-block mb-1 mb-sm-0">Validated By <a class="hash-tag text-truncate" href="./address.html?address=0xea0a6e3c511bbd10f4519ece37dc24887e11b55d">Node: MoneyWorx</a></span><a href="./txs.html?block=9901162" data-toggle="tooltip" title="" data-original-title="Transactions in this Block">279 txns </a> <span class="small text-secondary">in 3 secs</span><span class="d-inline-block d-sm-none"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.23374 TORO</span></span></div><div class="d-none d-sm-block"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.23374 TORO</span></div></div></div></div>
+					<hr class="hr-space">
+					<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary"><span class="btn-icon__inner text-dark">Bk</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none">Block</span> <a href="./block.html?block=9901161">9901161</a><span class="d-sm-block small text-secondary ml-1 ml-sm-0 text-nowrap"> 25 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-flex justify-content-between"><div class="text-nowrap"><span class="d-block mb-1 mb-sm-0">Validated By <a class="hash-tag text-truncate" href="./address.html?address=0xe9ae3261a475a27bb1028f140bc2a7c843318afd">Node: ToroCorp</a></span><a href="./txs.html?block=9901161" data-toggle="tooltip" title="" data-original-title="Transactions in this Block">248 txns </a> <span class="small text-secondary">in 3 secs</span><span class="d-inline-block d-sm-none"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.22124 TORO</span></span></div><div class="d-none d-sm-block"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.22124 TORO</span></div></div></div></div>
+					<hr class="hr-space">
+					<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary"><span class="btn-icon__inner text-dark">Bk</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none">Block</span> <a href="./block.html?block=9901160">9901160</a><span class="d-sm-block small text-secondary ml-1 ml-sm-0 text-nowrap"> 28 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-flex justify-content-between"><div class="text-nowrap"><span class="d-block mb-1 mb-sm-0">Validated By <a class="hash-tag text-truncate" href="./address.html?address=0xe2d3a739effcd3a99387d015e260eefac72ebea1">Node: ToroCorp</a></span><a href="./txs.html?block=9901160" data-toggle="tooltip" title="" data-original-title="Transactions in this Block">257 txns </a> <span class="small text-secondary">in 3 secs</span><span class="d-inline-block d-sm-none"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.21277 TORO</span></span></div><div class="d-none d-sm-block"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.21277 TORO</span></div></div></div></div>
+					<hr class="hr-space">
+					<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary"><span class="btn-icon__inner text-dark">Bk</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none">Block</span> <a href="./block.html?block=9901159">9901159</a><span class="d-sm-block small text-secondary ml-1 ml-sm-0 text-nowrap"> 31 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-flex justify-content-between"><div class="text-nowrap"><span class="d-block mb-1 mb-sm-0">Validated By <a class="hash-tag text-truncate" href="./address.html?address=0xce2fd7544e0b2cc94692d4a704debef7bcb61328">Node: ToroCorp</a></span><a href="./txs.html?block=9901159" data-toggle="tooltip" title="" data-original-title="Transactions in this Block">257 txns </a> <span class="small text-secondary">in 3 secs</span><span class="d-inline-block d-sm-none"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.21583 TORO</span></span></div><div class="d-none d-sm-block"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.21583 TORO</span></div></div></div></div>
+					<hr class="hr-space">
+					<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary"><span class="btn-icon__inner text-dark">Bk</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none">Block</span> <a href="./block.html?block=9901158">9901158</a><span class="d-sm-block small text-secondary ml-1 ml-sm-0 text-nowrap"> 34 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-flex justify-content-between"><div class="text-nowrap"><span class="d-block mb-1 mb-sm-0">Validated By <a class="hash-tag text-truncate" href="./address.html?address=0xbe807dddb074639cd9fa61b47676c064fc50d62c">Node: ToroCorp</a></span><a href="./txs.html?block=9901158" data-toggle="tooltip" title="" data-original-title="Transactions in this Block">249 txns </a> <span class="small text-secondary">in 3 secs</span><span class="d-inline-block d-sm-none"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.1968 TORO</span></span></div><div class="d-none d-sm-block"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.1968 TORO</span></div></div></div></div>
+					<hr class="hr-space">
+					<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary"><span class="btn-icon__inner text-dark">Bk</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none">Block</span> <a href="./block.html?block=9901157">9901157</a><span class="d-sm-block small text-secondary ml-1 ml-sm-0 text-nowrap"> 37 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-flex justify-content-between"><div class="text-nowrap"><span class="d-block mb-1 mb-sm-0">Validated By <a class="hash-tag text-truncate" href="./address.html?address=0xb8f7166496996a7da21cf1f1b04d9b3e26a3d077">Node: ToroCorp</a></span><a href="./txs.html?block=9901157" data-toggle="tooltip" title="" data-original-title="Transactions in this Block">312 txns </a> <span class="small text-secondary">in 3 secs</span><span class="d-inline-block d-sm-none"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.27256 TORO</span></span></div><div class="d-none d-sm-block"><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Block Reward">0.27256 TORO</span></div></div></div></div>
+			-->
+										<table id="blocktable" class="table table-striped table-fixed history">
+
+											<thead>
+												<tr>
+													<th data-field="time" class="col-sm-2">Block</th>
+													<th data-field="type" class="col-sm-2">Time:</th>
+													<th data-field="type" class="col-sm-2">Transactions:</th>
+													<th data-field="hash" class="col-sm-3">Validatedby:</th>
+												</tr>
+
+											</thead>
+											<tbody>
+												<tr>
+													<td colspan=4>Loading...</td>
+												</tr>
+											</tbody>
+										</table>
+										<!-- END CONTENT -->
+									</div>
+								</div>
+
+							</div>
+							<div class="card-footer">
+								<a class="btn btn-xs btn-block btn-soft-primary" href="./blocks.html">View all
+									blocks</a>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col-lg-6">
+						<div class="card h-100">
+
+							<div class="card-header">
+								<h2 class="card-header-title">Latest Transactions</h2>
+							</div>
+							<div class="js-scrollbar card-body overflow-hidden mCustomScrollbar _mCS_2 mCS-autoHide"
+								style="height: 400px; position: relative; overflow: hidden;">
+								<div id="mCSB_2" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside"
+									tabindex="0" style="max-height: none;">
+									<div id="mCSB_2_container" class="mCSB_container"
+										style="position:relative; top:0; left:0;" dir="ltr">
+										<!-- CONTENT: TRANSACTION LIST -->
+										<!--
+			<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary rounded-circle"><span class="btn-icon__inner text-dark">Tx</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none mr-1">TX#</span><a class="hash-tag hash-tag--xs hash-tag-xs-down--md text-truncate" href="./txs.html?tx=0xbaee404c4ffc4f61567e9e8502c08f33c980a0b487abb3dbbe9623722f3e2b25">0xbaee404c4ffc4f61567e9e8502c08f33c980a0b487abb3dbbe9623722f3e2b25</a><span class="d-none d-sm-block small text-secondary">10 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-sm-flex justify-content-between"><div class="text-nowrap mr-4 mb-1 mb-sm-0"><span>From <a class="hash-tag text-truncate" href="./address.html?address=0x29a97c6effb8a411dabc6adeefaa84f5067c8bbe">0x29a97c6effb8a411dabc6adeefaa84f5067c8bbe</a></span><span class="d-sm-block">To <a href="./address?address=0x0000000000000000000000000000000000001000" class="hash-tag text-truncate">0x0000000000000000000000000000000000001000</a></span></div><div><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Amount">0.24479 TORO</span></div></div></div></div><hr class="hr-space">
+			<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary rounded-circle"><span class="btn-icon__inner text-dark">Tx</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none mr-1">TX#</span><a class="hash-tag hash-tag--xs hash-tag-xs-down--md text-truncate" href="./txs.html?tx=0xdbe3b57c58a745ac49b561c075e9c517ac5c63a2fccf387ed72ed33a5a07a0f4">0xdbe3b57c58a745ac49b561c075e9c517ac5c63a2fccf387ed72ed33a5a07a0f4</a><span class="d-none d-sm-block small text-secondary">10 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-sm-flex justify-content-between"><div class="text-nowrap mr-4 mb-1 mb-sm-0"><span>From <a class="hash-tag text-truncate" href="./address.html?address=0xee65d2f952943bac49c2ff2235f12087092018ae">0xee65d2f952943bac49c2ff2235f12087092018ae</a></span><span class="d-sm-block">To <a href="./address.html?address=0x39bea96e13453ed52a734b6aceed4c41f57b2271" class="hash-tag text-truncate">0x39bea96e13453ed52a734b6aceed4c41f57b2271</a></span></div><div><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Amount">0 TORO</span></div></div></div></div><hr class="hr-space">
+			<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary rounded-circle"><span class="btn-icon__inner text-dark">Tx</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none mr-1">TX#</span><a class="hash-tag hash-tag--xs hash-tag-xs-down--md text-truncate" href="./txs.html?tx=0x7eafa7dceef1a0ca85af6a0658a630181165e1ca9451fd38d5be7f9e0dba5137">0x7eafa7dceef1a0ca85af6a0658a630181165e1ca9451fd38d5be7f9e0dba5137</a><span class="d-none d-sm-block small text-secondary">10 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-sm-flex justify-content-between"><div class="text-nowrap mr-4 mb-1 mb-sm-0"><span>From <a class="hash-tag text-truncate" href="./address.html?address=0x0c6e5fc8b6a0c17600acc537c1055320df4fcf60">0x0c6e5fc8b6a0c17600acc537c1055320df4fcf60</a></span><span class="d-sm-block">To <a href="./address.html?address=0xa0c5e0f798d15728014419313791112db3f3c94f" class="hash-tag text-truncate">0xa0c5e0f798d15728014419313791112db3f3c94f</a></span></div><div><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Amount">0 TORO</span></div></div></div></div><hr class="hr-space">
+			<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary rounded-circle"><span class="btn-icon__inner text-dark">Tx</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none mr-1">TX#</span><a class="hash-tag hash-tag--xs hash-tag-xs-down--md text-truncate" href="./txs.html?tx=0xe079d0b4d59942e5edc493337adf7bea45fcff8cd49deaeca564252f8a94ae15">0xe079d0b4d59942e5edc493337adf7bea45fcff8cd49deaeca564252f8a94ae15</a><span class="d-none d-sm-block small text-secondary">10 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-sm-flex justify-content-between"><div class="text-nowrap mr-4 mb-1 mb-sm-0"><span>From <a class="hash-tag text-truncate" href="./address.html?address=0xfaafb8fd8ab189450d8ab06fe8522d1b432b3465">0xfaafb8fd8ab189450d8ab06fe8522d1b432b3465</a></span><span class="d-sm-block">To <a href="./address.html?address=0x39bea96e13453ed52a734b6aceed4c41f57b2271" class="hash-tag text-truncate">0x39bea96e13453ed52a734b6aceed4c41f57b2271</a></span></div><div><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Amount">0 TORO</span></div></div></div></div><hr class="hr-space">
+			<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary rounded-circle"><span class="btn-icon__inner text-dark">Tx</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none mr-1">TX#</span><a class="hash-tag hash-tag--xs hash-tag-xs-down--md text-truncate" href="./txs.html?tx=0xa8b13c4330eee2280478fee78dfd0bbbb49e33dd89605aebff9a40824a601c89">0xa8b13c4330eee2280478fee78dfd0bbbb49e33dd89605aebff9a40824a601c89</a><span class="d-none d-sm-block small text-secondary">10 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-sm-flex justify-content-between"><div class="text-nowrap mr-4 mb-1 mb-sm-0"><span>From <a class="hash-tag text-truncate" href="./address.html?address=0xec7ed1ac40e9d8764b465e17dd4fdda0cc3081a0">0xec7ed1ac40e9d8764b465e17dd4fdda0cc3081a0</a></span><span class="d-sm-block">To <a href="./address.html?address=0x39bea96e13453ed52a734b6aceed4c41f57b2271" class="hash-tag text-truncate">0x39bea96e13453ed52a734b6aceed4c41f57b2271</a></span></div><div><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Amount">0 TORO</span></div></div></div></div><hr class="hr-space">
+			<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary rounded-circle"><span class="btn-icon__inner text-dark">Tx</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none mr-1">TX#</span><a class="hash-tag hash-tag--xs hash-tag-xs-down--md text-truncate" href="./txs.html?tx=0x9056a7c38faffb35ffc837a0f686e057a11238b9f93f6b3665365e1711625240">0x9056a7c38faffb35ffc837a0f686e057a11238b9f93f6b3665365e1711625240</a><span class="d-none d-sm-block small text-secondary">10 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-sm-flex justify-content-between"><div class="text-nowrap mr-4 mb-1 mb-sm-0"><span>From <a class="hash-tag text-truncate" href="./address.html?address=0xb15c3994f39c707992ee4fe324967e2680210281">0xb15c3994f39c707992ee4fe324967e2680210281</a></span><span class="d-sm-block">To <a href="./address.html?address=0x5e2f2c0e63ace6b7ddcb426d30eff4f81f75e566" class="hash-tag text-truncate">0x5e2f2c0e63ace6b7ddcb426d30eff4f81f75e566</a></span></div><div><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Amount">0 TORO</span></div></div></div></div><hr class="hr-space">
+			<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary rounded-circle"><span class="btn-icon__inner text-dark">Tx</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none mr-1">TX#</span><a class="hash-tag hash-tag--xs hash-tag-xs-down--md text-truncate" href="./txs.html?tx=0x7cd8941cabb771885bd8ccc8ae52f0168da44662f743662ca6bdbb6e3a74f52b">0x7cd8941cabb771885bd8ccc8ae52f0168da44662f743662ca6bdbb6e3a74f52b</a><span class="d-none d-sm-block small text-secondary">10 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-sm-flex justify-content-between"><div class="text-nowrap mr-4 mb-1 mb-sm-0"><span>From <a class="hash-tag text-truncate" href="./address.html?address=0xcd5e15be3dd88e5661ce973b1d774c198b8d2847">0xcd5e15be3dd88e5661ce973b1d774c198b8d2847</a></span><span class="d-sm-block">To <a href="./address.html?address=0xce62f350cbd94397085cc42935eb108d2aa6beec" class="hash-tag text-truncate">0xce62f350cbd94397085cc42935eb108d2aa6beec</a></span></div><div><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Amount">0 TORO</span></div></div></div></div><hr class="hr-space">
+			<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary rounded-circle"><span class="btn-icon__inner text-dark">Tx</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none mr-1">TX#</span><a class="hash-tag hash-tag--xs hash-tag-xs-down--md text-truncate" href="./txs.html?tx=0x1f9783091b303f1a42cd3807d0d717cdb6e005163acf12597ab3baf0a0399657">0x1f9783091b303f1a42cd3807d0d717cdb6e005163acf12597ab3baf0a0399657</a><span class="d-none d-sm-block small text-secondary">10 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-sm-flex justify-content-between"><div class="text-nowrap mr-4 mb-1 mb-sm-0"><span>From <a class="hash-tag text-truncate" href="./address.html?address=0x82a35dc9bc6c398849d030116f1b20a2cb1e5d18">0x82a35dc9bc6c398849d030116f1b20a2cb1e5d18</a></span><span class="d-sm-block">To <a href="./address.html?address=0x12e5b44374d4cc032800f87af9c3671ba2d93c3f" class="hash-tag text-truncate">0x12e5b44374d4cc032800f87af9c3671ba2d93c3f</a></span></div><div><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Amount">0 TORO</span></div></div></div></div><hr class="hr-space">
+			<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary rounded-circle"><span class="btn-icon__inner text-dark">Tx</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none mr-1">TX#</span><a class="hash-tag hash-tag--xs hash-tag-xs-down--md text-truncate" href="./txs.html?tx=0x6fbcf4206f83dda84e9e6a002c9ade7184a607a2ed8a5fea2981fa599d5922a0">0x6fbcf4206f83dda84e9e6a002c9ade7184a607a2ed8a5fea2981fa599d5922a0</a><span class="d-none d-sm-block small text-secondary">10 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-sm-flex justify-content-between"><div class="text-nowrap mr-4 mb-1 mb-sm-0"><span>From <a class="hash-tag text-truncate" href="./address.html?address=0xc7376d48ab079af547231ee8831774fe80c629bf">0xc7376d48ab079af547231ee8831774fe80c629bf</a></span><span class="d-sm-block">To <a href="./address.html?address=0x39bea96e13453ed52a734b6aceed4c41f57b2271" class="hash-tag text-truncate">0x39bea96e13453ed52a734b6aceed4c41f57b2271</a></span></div><div><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Amount">0 TORO</span></div></div></div></div><hr class="hr-space">
+			<div class="row"><div class="col-sm-4"><div class="media align-items-sm-center mr-4 mb-1 mb-sm-0"><div class="d-none d-sm-flex mr-2"><span class="btn btn-icon btn-soft-secondary rounded-circle"><span class="btn-icon__inner text-dark">Tx</span></span></div><div class="media-body"><span class="d-inline-block d-sm-none mr-1">TX#</span><a class="hash-tag hash-tag--xs hash-tag-xs-down--md text-truncate" href="./txs.html?tx=0x7e7d5d267174b52c91745be007fb21612dcce8fbb2484e2a2af88c40f8d3411b">0x7e7d5d267174b52c91745be007fb21612dcce8fbb2484e2a2af88c40f8d3411b</a><span class="d-none d-sm-block small text-secondary">10 secs ago</span></div></div></div><div class="col-sm-8"><div class="d-sm-flex justify-content-between"><div class="text-nowrap mr-4 mb-1 mb-sm-0"><span>From <a class="hash-tag text-truncate" href="./address.html?address=0x2027ffd4f9638c5cd2456057745a799359765312">0x2027ffd4f9638c5cd2456057745a799359765312</a></span><span class="d-sm-block">To <a href="./address.html?address=0x10ed43c718714eb63d5aa57b78b54704e256024e" class="hash-tag text-truncate">0x10ed43c718714eb63d5aa57b78b54704e256024e</a></span></div><div><span class="u-label u-label--xs u-label--badge-in u-label--secondary text-center text-nowrap" data-toggle="tooltip" title="" data-original-title="Amount">0 TORO</span></div></div></div></div>
+            -->
+										<table id="txtable" class="table table-striped table-fixed history"
+											style="width:500px;">
+											<thead>
+												<tr>
+													<th data-field="time" class="col-sm-2">Time</th>
+													<th data-field="type" class="col-sm-2">Type:</th>
+													<th data-field="from_trunc" class="col-sm-2" align=right>From:</th>
+													<th data-field="to_trunc" class="col-sm-2" align=right>To:</th>
+													<th data-field="value" class="col-sm-2">Value:</th>
+													<!-- <th data-field="hash_trunc" class="col-sm-3">Hash:</th> -->
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td colspan=5>Loading...</td>
+													<!-- td colspan=6>Loading...</td> -->
+												</tr>
+											</tbody>
+										</table>
+										<!-- END CONTENT -->
+									</div>
+								</div>
+
+
+								<div id="mCSB_2_scrollbar_vertical"
+									class="mCSB_scrollTools mCSB_2_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical"
+									style="display: block;">
+									<div class="mCSB_draggerContainer">
+										<div id="mCSB_2_dragger_vertical" class="mCSB_dragger"
+											style="position: absolute; min-height: 50px; display: block; height: 213px; max-height: 366px; top: 0px;">
+											<div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
+										</div>
+										<div class="mCSB_draggerRail"></div>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<a class="btn btn-xs btn-block btn-soft-primary" href="./txs.html">View all
+									transactions</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</main>
+
+		<!-- Removes the overlay at the bottom
+<div id="push"></div>
+-->
+
+	</div>
+	<!-- ============================================================================================================================================= -->
+
+	<!-- FOOTER -->
+	<footer class="bg-dark py-4" style="background-image: url(/images/svg/components/abstract-shapes-20.svg?v=2);">
+		<div class="container">
+			<div class="row justify-content-md-between font-size-1 py-2">
+				<div class="col-lg-3 mb-4 mb-lg-0">
+					<div class="d-flex h-100 flex-column">
+						<div class="d-flex align-items-center mb-4">
+							<img width="25" src="./images/toro-logo.png" alt="Toronet Logo">
+							<span class="h5 text-white mb-0 ml-3">Powered by Toronet</span>
+						</div>
+						<p class="text-white">
+							Toronet Explorer is a Block Explorer and Analytics Platform for the Toronet Blockchain
+						</p>
+
+						<div class="d-flex align-items-center mb-4">
+							<span class="d-none d-md-inline-block">
+								<button type="button"
+									class="btn btn-xss btn-soft-light text-nowrap d-flex align-items-center mr-2"
+									onClick="addNetwork();">
+									<img class="mr-1" width="15" src="./home_files/metamask.svg" alt="Metamask"> Add
+									Toro Network
+								</button>
+							</span>
+							<a class="btn btn-xss btn-soft-light mr-2" href="emailto:info@toronet.org">
+								<i class="fa fa-cogs mr-1"></i>Preferences
+							</a>
+							<button id="darkModaBtn" type="button" data-toggle="tooltip" data-title="Day/Night Mode"
+								class="btn btn-sm btn-icon btn-soft-light" data-original-title="" title="">
+								<i id="darkModaBtnIcon" class="fa fa-moon"></i></button>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+					<h4 class="h6 text-white heading-border">Organization</h4>
+					<ul
+						class="list-group list-group-sm list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+						<li><a class="list-group-item" href="emailto:info@toronet.org">Advertise<sup><span
+										class="badge badge-success font-size-default ml-1">New</span></sup></a></li>
+						<li><a class="list-group-item" href="emailto:info@toronet.org">Delegate to ToroCorp<sup><span
+										class="badge badge-info font-size-default ml-1">Staking</span></sup></a></li>
+						<li><a class="list-group-item" href="emailto:info@toronet.org">Contact Us</a></li>
+						<li><a class="list-group-item" href="./Downloads/Toro_final-audit-report.pdf">Code Audit
+								Reports</a></li>
+						<li><a class="list-group-item" href="./termsofservice.html">Terms of Service</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+					<h4 class="h6 text-white heading-border">Community</h4>
+					<ul
+						class="list-group list-group-sm list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+						<li><a class="list-group-item" href="./apis.html">Developer APIs</a></li>
+						<li><a class="list-group-item" target="_blank" href="emailto:info@toronet.org">Knowledge
+								Base</a></li>
+						<li><a class="list-group-item" rel="nofollow noopener" target="_blank"
+								href="emailto:info@toronet.org">Network Status</a></li>
+						<li><a class="list-group-item" rel="nofollow noopener" target="_blank"
+								href="emailto:info@toronet.org">Learn About Toronet</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+					<h4 class="h6 text-white heading-border">Products</h4>
+					<ul
+						class="list-group list-group-sm list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+						<li><a class="list-group-item" href="https://toronet.org/explorer/" title="Toronet Explorer"
+								target="_blank">Toronet Explorer</a></li>
+						<li><a class="list-group-item" href="https://testnet.toronet.org"
+								title="Toronet Testnet Explorer" target="_blank">Toronet Testnet Explorer</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<hr class="opacity-md">
+			<div class="row justify-content-between align-items-center font-size-1">
+				<div class="col-md-6 mb-2 mb-md-0 d-flex">
+					<p class="mb-0 text-white">Toronet Explorer © 2021
+						<span class="mx-1">|</span> ⛏ Built by the team behind <a class="text-primary"
+							href="https://toronet.org/" target="_blank"><b>Toronet Site</b></a>
+					</p>
+				</div>
+				<div class="col-md-6 text-md-right">
+					<ul class="list-inline mb-0">
+						<li class="list-inline-item">
+							<a class="btn btn-sm btn-icon btn-soft-light btn-pill" href="emailto:info@toronet.org"
+								data-toggle="tooltip" data-placement="top" title="" data-original-title="Contact Us">
+								<i class="far fa-envelope btn-icon__inner"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a class="btn btn-sm btn-icon btn-soft-light btn-pill" href="https://twitter.com/Toronet"
+								rel="nofollow noopener" target="_blank" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Twitter">
+								<i class="fab fa-twitter btn-icon__inner"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a class="btn btn-sm btn-icon btn-soft-light btn-pill" href="https://medium.com/@Toronet"
+								rel="nofollow noopener" target="_blank" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Medium">
+								<i class="fab fa-medium btn-icon__inner"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--END FOOTER -->
+	<!-- ============================================================================================================================================= -->
+
+	<div id="divcookie" class="fixed-bottom mx-3" style="display: block;">
+		<div class="alert alert-light border shadow-sm p-3" role="alert">
+			<div class="d-flex justify-content-center align-items-center">
+				<span>
+					<p class="text-dark mr-3 mb-2 mb-md-0">
+						<i class="far fa-cookie-bite text-secondary mr-1"></i>This website <a
+							href="./termsofservice.html#cookiestatement" target="_blank">uses cookies to improve your
+							experience</a> and has an updated <a href="./privacyPolicy.html">Privacy Policy</a>.
+					</p>
+				</span>
+				<div>
+					<button id="btnCookie" class="btn btn-sm btn-primary text-nowrap py-1" data-dismiss="alert"
+						aria-label="Close">Got It</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a class="js-go-to u-go-to animated" href="#" data-position="{&quot;bottom&quot;: 20, &quot;right&quot;: 15 }"
+		data-type="fixed" data-offset-top="400" data-compensation="#header" data-show-effect="slideInUp"
+		data-hide-effect="slideOutDown"
+		style="display: inline-block; position: fixed; opacity: 0; bottom: 20px; right: 15px;">
+		<span class="fa fa-arrow-up u-go-to__inner"></span>
+	</a>
+	<script src="./home_files/jquery-ui.min.js.download"></script>
+	<script src="./home_files/jquery-migrate.min.js.download"></script>
+	<!--
+<script src="./home_files/popper.min.js.download"></script>
+<script src="./home_files/bootstrap.min.js.download"></script>
+-->
+	<script src="./home_files/hs.megamenu.js.download"></script>
+	<script src="./home_files/jquery.mCustomScrollbar.concat.min.js.download"></script>
+	<script src="./home_files/jquery.cubeportfolio.min.js.download"></script>
+
+	<script src="./home_files/hs.core.js.download"></script>
+	<script src="./home_files/hs.header.js.download"></script>
+	<script src="./home_files/hs.unfold.js.download"></script>
+	<script src="./home_files/hs.malihu-scrollbar.js.download"></script>
+	<script src="./home_files/hs.focus-state.js.download"></script>
+	<script src="./home_files/hs.go-to.js.download"></script>
+	<script src="./home_files/hs.cubeportfolio.js.download"></script>
+	<script src="./home_files/combine-js-bottom2.js.download"></script>
+
+	<script>
+		$(window).on('load', function () {
+			// initialization of HSMegaMenu component
+			$('.js-mega-menu').HSMegaMenu({
+				event: 'hover',
+				pageContainer: $('.container'),
+				breakpoint: 767.98,
+				hideTimeOut: 0
+			});
+			myfn_subscribeNewsletter.startFn("#btnSubscribeNewsletter", "#signupSrEmail")
+		});
+
+		$(document).on('ready', function () {
+			// initialization of header
+			$.HSCore.components.HSHeader.init($('#header'));
+
+			// initialization of unfold component
+			$.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+				afterOpen: function () {
+					$(this).find('input[type="search"]').focus();
+				}
+			});
+
+			// initialization of malihu scrollbar
+			$.HSCore.components.HSMalihuScrollBar.init($('.js-scrollbar'));
+
+			// initialization of focus state
+			$.HSCore.components.HSFocusState.init();
+
+			// initialization of go to
+			$.HSCore.components.HSGoTo.init('.js-go-to');
+
+			// initialization of cubeportfolio
+			//$.HSCore.components.HSCubeportfolio.init('.cbp');
+		});
+	</script>
+	<script type="text/javascript">
+		var sid = '945189c93b3c4204998cddd5ef3ed1f3';
+		var strGlobal = sessionStorage.getItem("ShowAs");
+		var cookieconsent = getCookie("toroscan_cookieconsent");
+		if (cookieconsent !== "True") {
+			document.getElementById("divcookie").style.display = "block";
+		};
+		function getCookie(cname) {
+			var name = cname + "=";
+			var ca = document.cookie.split(';');
+			for (var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) === ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) === 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+		$("#btnCookie").click(function () {
+			$("#divcookie").fadeOut("slow", function () {
+				var d = new Date();
+				d.setTime(d.getTime() + (1095 * 24 * 60 * 60 * 1000));
+				var expires = "expires=" + d.toUTCString();
+				document.cookie = "toroscan_cookieconsent=True" + ";" + expires + ";path=/";;
+			});
+		});
+		function handleSearchText(data) {
+			searchAddress = false;
+			if ($("txtSearchInput").val() == "") {
+				$("#hdnSearchText").val("");
+			}
+		}
+	</script>
+	<script src="./home_files/web3-utils.min.js.download"></script>
+	<script src="./home_files/web3-eth.min.js.download"></script>
+	<script src="./home_files/web3-providers-http.min.js.download"></script>
+	<script type="text/javascript">
+		var eth;
+		var isTestnet = 'true';
+
+		async function addNetwork() {
+
+
+			alert("Note you must have MetaMAsk installed for this command to have any effect");
+
+			var type = 'web3';
+
+			if (type === 'web3') {
+				eth = new Web3Eth();
+			}
+
+			//alert ( typeof eth );
+			if (typeof eth !== 'undefined') {
+				//var network = 0;
+				//network = await eth.net.getId();
+				//netID = network.toString();
+
+				const params = [{
+					chainId: '54321',
+					chainName: 'Toronet Test Network',
+					nativeCurrency: {
+						name: 'TORO',
+						symbol: 'TORO',
+						decimals: 18
+					},
+					rpcUrls: ['https://testnet.toronet.org/rpc/'],
+					blockExplorerUrls: ['https://testnet.toronet.org/']
+				}]
+				//alert("here2");
+
+				window.ethereum.request({ method: 'wallet_addEthereumChain', params })
+					.then(() => console.log('Success'))
+					.catch((error) => console.log("Error", error.message))
+				//alert("here3");
+			}
+		}
+
+
+	</script>
+	<script src="./home_files/highcharts.js.download"></script>
+	<script>
+		var lang_miner = "Validator";
+		var lang_mined_by = "Validated by";
+		var lang_block = "Block";
+		var lang_block_reward = "Block Reward";
+		var lang_sec = "sec";
+		var lang_secs = "secs";
+		var lang_min = "min";
+		var lang_mins = "mins";
+		var lang_from = "From";
+		var lang_to = "To";
+		var lang_amount = "Amount";
+		var lang_tx = "Tx";
+		var lang_bk = "Bk";
+		var lang_ether = "Toro";
+		var lang_txns = "txns";
+		var lang_in_X = "in";
+		var lang_ago = "ago";
+		var lang_secs_ago = "secs ago";
+		var lang_sec_ago = "sec ago";
+		var lang_sec_in = "";
+	</script>
+	<script type="text/javascript">
+
+	</script>
+	<script type="text/javascript">
+
+		//function setFocus() {
+		//    if (window.innerWidth > 600)
+		//        $("input[name=q]").focus();
+		//}
+		//$(document).ready(function () {
+		//    setFocus();
+		//});
+	</script>
+
+	<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+		style="display: none;"></ul>
+	<div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+	<!-- Get the data -->
+
+	<script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="./plugins/bootstrap-table/dist/bootstrap-table.min.js"></script>
+
+
+	<script src="./scripts/blocks.js"></script>
+	<script src="./scripts/blockdata.js"></script>
+	<script src="./scripts/data.js"></script>
+	<!--
+	Variables:
+	lastblock
+	total_transactions
+	active_nodes
+	toros_in_reserve
+	reserved_by_nodes
+    blockdata
+    transactionsdata	
+	-->
+
+</body>
+
+</html>

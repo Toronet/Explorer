@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	 Toronet Terms of Service
+</title><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="Description" content="Toronet Explorer allows you to explore and search the Toronet blockchain for transactions, addresses, tokens, prices and other activities taking place on Toronet network">
+<meta name="author" content="TestExplorer.Toronet.org"><meta name="keywords" content="Toronet, explorer, Toro, ETH, BNB, BTC, search, blockchain, crypto, currency"><meta name="format-detection" content="telephone=no">
+<meta property="og:title" content=" Toronet Blockchain Explorer"> 
+<meta property="og:description" content="Toronet Explorer allows you to explore and search the Toronet blockchain for transactions, addresses, tokens, prices and other activities taking place on Toronet network"> 
+<meta property="og:type" content="website"> <meta property="og:site_name" content="Toronet Blockchain Explorer"> <meta property="og:url" content="http://testexplorer.toronet.org/"> 
+<meta property="og:image" content="./images/toro-logo.png"> 
+<meta property="og:image:alt" content="Visit Toronet.org"> <meta name="twitter:card" content="summary"> 
+<meta name="twitter:title" content=" Toronet Blockchain Explorer"> 
+<meta property="twitter:description" content="Toronet Explorer allows you to explore and search the Toronet blockchain for transactions, addresses, tokens, prices and other activities taking place on Toronet network"> 
+<meta name="twitter:site" content="@Toronet"> 
+<meta property="twitter:image" content=./images/toro-logo.png">
+<link rel="shortcut icon" href="./images/favicon.ico">
+<script type="text/javascript" async="" src="./home_files/analytics.js.download"></script><script async="" src="./home_files/js"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-46998878-23');
+    </script>
+	<script>
+        //Search box text ad
+        //var availableAd = [];
+        //var gotAd = [];
+
+        
+        availableAd = [""];
+        gotAd = [ "ShowAds					" ];
+        
+    </script>
+<link rel="stylesheet" href="./home_files/fontawesome-all.min.css">
+<link rel="stylesheet" href="./home_files/animate.min.css">
+<link rel="stylesheet" href="./home_files/hs.megamenu.css">
+<link rel="stylesheet" href="./home_files/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="./home_files/select2.min.css">
+<link rel="stylesheet" href="./home_files/theme.min.css">
+<link rel="stylesheet" href="./home_files/custom.css">
+<script src="./home_files/jquery.min.js.download"></script>
+<script type="text/javascript" src="./home_files/blockies.js.download"></script>
+<style>
+        .ui-autocomplete {
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: default
+        }
+        .ui-state-active {
+            border-color: #e7eaf3;
+            background: #f8fafd;
+        }
+        body.dark-mode .ui-state-active {
+            background-color: #252525;
+            border-color: #323232;
+        }
+    </style>
+<link rel="stylesheet" type="text/css" href="./home_files/datatables.min.css">
+<style>
+        .dataTable > thead > tr > th[class*="sort"]:before,
+        .dataTable > thead > tr > th[class*="sort"]:after {
+            content: "" !important;
+        }
+
+        .dataTables_processing {
+        z-index: 100;
+        }
+
+        .tooltip-inner {
+            max-width: 290px;            
+        }
+    </style>
+<script async="" src="./home_files/api.js.download"></script><script src="./home_files/jquery.mousewheel.min.js.download"></script></head>
+<body id="body">
+<div class="wrapper">
+
+<!-- HEADER -->
+<header id="header" class="u-header">
+<div class="u-header__section ">
+<div id="logoAndNav" class="container">
+<nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space hs-menu-initialized hs-menu-horizontal">
+<div class="w-lg-auto">
+<a class="navbar-brand  pt-md-0" href="./" target="_parent" aria-label="BscScan">
+<img id="logo-header" width="160" src="./images/toro-updated.png" alt="Toro Logo">
+</a>
+<div id="ethPrice">
+<div class="d-none d-md-inline-block u-label u-label--price rounded mt-1 ml-n1 text-nowrap">
+
+<!-- CONTENT TORO PRICE -->
+<span class="text-dark">TORO: $1.00</span><span data-toggle="tooltip" data-placement="top" data-title="Changes in the last 24 hours" data-original-title="" title=""><span class="text-success"> (+0.00%)</span></span>
+<!-- END CONTENT -->
+
+</div>
+</div>
+</div>
+
+<!-- MENU -->
+<div>
+<button type="button" class="navbar-toggler btn u-hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+<span id="hamburgerTrigger" class="u-hamburger__box">
+<span class="u-hamburger__inner"></span>
+</span>
+</button>
+</div>
+<div class="d-flex flex-column w-100">
+<div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse order-md-2">
+<ul class="navbar-nav u-header__navbar-nav px-2 px-md-0">
+<li id="LI_default" class="nav-item u-header__nav-item active" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a class="nav-link u-header__nav-link" href="./home.html" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">Home</a>
+</li>
+<li id="LI_blockchain" class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a id="blockchainMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">Blockchain</a>
+<ul id="blockchainSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer" aria-labelledby="blockchainMegaMenu" style="min-width: 230px; display: none;">
+<!--
+<li id="LI_accountall"><a href="./accounts.html" class="nav-link u-header__sub-menu-nav-link">Top Accounts</a></li>
+<li class="dropdown-divider"></li>
+-->
+<li id="LI12"><a href="./txs.html" class="nav-link u-header__sub-menu-nav-link">View All Txns</a></li>
+<li id="LI14"><a href="./txs_toros.html" class="nav-link u-header__sub-menu-nav-link">View Toro Txns</a></li>
+<li class="dropdown-divider"></li>
+<li id="LI14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size=2>StableCoin Txns</font></li>
+<li id="LI14"><a href="./txs_egps.html" class="nav-link u-header__sub-menu-nav-link">View τEGP Txns</a></li>
+<li id="LI14"><a href="./txs_kshs.html" class="nav-link u-header__sub-menu-nav-link">View τKSH Txns</a></li>
+<li id="LI14"><a href="./txs_nairas.html" class="nav-link u-header__sub-menu-nav-link">View τNGN Txns</a></li>
+<li id="LI14"><a href="./txs_zars.html" class="nav-link u-header__sub-menu-nav-link">View τZAR Txns</a></li>
+<li id="LI14"><a href="./txs_euros.html" class="nav-link u-header__sub-menu-nav-link">View τEURO Txns</a></li>
+<li id="LI14"><a href="./txs_pounds.html" class="nav-link u-header__sub-menu-nav-link">View τPOUND Txns</a></li>
+<li id="LI14"><a href="./txs_dollars.html" class="nav-link u-header__sub-menu-nav-link">View τUSD Txns</a></li>
+<li class="dropdown-divider"></li>
+<li id="LI14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size=2>Tokens</font></li>
+<li id="LI14"><a href="./txs_espees.html" class="nav-link u-header__sub-menu-nav-link">View ESPEES Txns</a></li>
+<li id="LI14"><a href="./txs_plasts.html" class="nav-link u-header__sub-menu-nav-link">View PLASTOKEN Txns</a></li>
+<li class="dropdown-divider"></li>
+<li class="dropdown-divider"></li>
+<li id="LI14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size=2>Crypto Txns</font></li>
+<li id="LI14"><a href="./txs_eths.html" class="nav-link u-header__sub-menu-nav-link">View τETH Txns</a></li>
+<li class="dropdown-divider"></li>
+<li id="LI_blocks">
+<a id="navBlocks" class="nav-link u-header__sub-menu-nav-link" href="./blocks.html" aria-haspopup="true" aria-expanded="false" aria-controls="navSubBlocks">View Blocks</a></li>
+
+<li class="divider"></li>
+<li class="dropdown-divider"></li>
+<li id="LI_contract_verified"><a href="https://www.toronet.org" class="nav-link u-header__sub-menu-nav-link">Go to Toro Website</a></li>
+</ul>
+</li>
+<li id="LI_validators" class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a id="validatorMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="validatorSubMenu">Nodes</a>
+<ul id="validatorSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer" aria-labelledby="validatorMegaMenu" style="min-width: 230px; display: none;">
+<li id="LI4"><a class="nav-link u-header__sub-menu-nav-link" href="./nodes.html">Toronet Nodes</a></li>
+</ul>
+</li>
+<li id="LI_Tokens" class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a id="testTokensMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="testTokensSubMenu">Tokens</a>
+<ul id="testTokensSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer" aria-labelledby="testTokensMegaMenu" style="min-width: 230px; display: none;">
+<li id="LI18"><a class="nav-link u-header__sub-menu-nav-link" href="./torotokens.html">Tọ̀rọ̀ Tokens</a></li>
+
+<li class="dropdown-divider"></li>
+<li id="LI42"><a class="nav-link u-header__sub-menu-nav-link" href="./fiat-tokens.html">Fiat StableCoins</a></li>
+<li id="LI40"><a class="nav-link u-header__sub-menu-nav-link" href="./crypto-tokens.html">Crypto StableCoins</a></li>
+<li class="dropdown-divider"></li>
+<li id="LI18"><a class="nav-link u-header__sub-menu-nav-link" href="./tokens.html">Tokens</a></li>
+<li class="dropdown-divider"></li>
+<li id="LI42"><a class="nav-link u-header__sub-menu-nav-link" href="./reserves.html">Reserves</a></li>
+<li id="LI42"><a class="nav-link u-header__sub-menu-nav-link" href="./ratesandfees.html">Rates & Fees</a></li>
+</ul>
+
+</li>
+<li id="LI_resources" class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a id="resourcesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="resourcesSubMenu">Resources</a>
+<ul id="resourcesSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer animated fadeOut" aria-labelledby="resourcesMegaMenu" style="min-width: 230px; display: none;">
+<li id="LI_charts2"><a class="nav-link u-header__sub-menu-nav-link" href="./wallets.html">Wallets</a></li>
+<li id="LI_charts2"><a class="nav-link u-header__sub-menu-nav-link" href="./wallets.html">Exchanges</a></li>
+<li id="LI_charts2"><a class="nav-link u-header__sub-menu-nav-link" href="./charts.html">Charts &amp; Stats</a></li>
+<!--
+<li id="LI_topstat"><a class="nav-link u-header__sub-menu-nav-link" href="./topstat.html">Top Statistics</a></li>
+-->
+</ul>
+</li>
+<li id="LI_Misc" class="nav-item hs-has-sub-menu u-header__nav-item my-md-n1" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a id="testMiscMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="testMiscSubMenu">Misc</a>
+<ul id="testMiscSubMenu" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer" aria-labelledby="testMiscMegaMenu" style="min-width: 215px; display: none;">
+<li id="LI11"><a class="nav-link u-header__sub-menu-nav-link" href="./apis.html">APIs</a></li>
+<!--
+<li id="LI50"><a class="nav-link u-header__sub-menu-nav-link" href="./unitconverter.html">Unit Converter <sup><span class="badge badge-success font-size-default ml-1"> New</span></sup></a></li>
+-->
+</ul>
+</li>
+<li class="u-header__nav-separator"></li>
+<li class="nav-item my-2 my-md-0">
+<a class="u-header__nav-link" href="http://testnet.toronet.org/wallet/">
+<i class="fa fa-user-circle mr-1"></i>Get Toros
+</a>
+</li>
+<li class="u-header__nav-separator"></li>
+<li class="nav-item hs-has-sub-menu u-header__nav-item my-md-n1" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+<a id="explorersWithDropdown" class="nav-link u-header__nav-link u-header__nav-link-toggle u-header__nav-link-toggle--mobile pr-0" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="explorersDropdown">
+<span class="btn btn-sm btn-icon btn-soft-primary cursor-pointer d-none d-md-inline-block">
+<img class="u-xs-avatar btn-icon__inner" src="./images/toro-logo-small.png" alt="Toro Logo Small">
+</span>
+<span class="d-inline-block d-md-none">Explorers</span>
+</a>
+<ul id="explorersDropdown" class="hs-sub-menu u-header__sub-menu u-header__sub-menu--spacer dropdown-menu-md-right animated fadeOut" aria-labelledby="explorersWithDropdown" style="min-width: 130px; display: none;">
+<li id="LI_Mainnet"><a class="nav-link u-header__sub-menu-nav-link" href="https://explorer.toronet.org/">Mainnet</a></li>
+<li id="LI_testnet"><a class="nav-link u-header__sub-menu-nav-link" href="https://testexplorer.toronet.org/">Testnet</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- END MENU -->
+
+<div id="form1">
+<form class="w-100 w-lg-55 order-md-1 ml-md-auto mt-2 mb-2 mb-md-0" action="#" method="GET" autocomplete="off" spellcheck="false">
+<div class="input-group input-group-sm">
+<div class="input-group-prepend d-none d-md-block">
+
+<select name="f" class="custom-select custom-select-sm  custom-arrow-select input-group-text font-size-base filterby">
+<option selected="" value="0">All Filters</option>
+<option value="1">Addresses</option>
+<option value="2">Tokens</option>
+<option value="3">Name Tags</option>
+<option value="4">Labels</option>
+<option value="5">Websites</option>
+</select>
+
+</div>
+<input type="text" class="form-control searchautocomplete ui-autocomplete-input list-unstyled py-3 mb-0" id="txtSearchInput" name="q" placeholder="Search by Address / Txn Hash / Block / Token" aria-label="Search by Address / Txn Hash / Block / Token" aria-describedby="button-header-search" onkeyup="handleSearchText(this);" autocomplete="off">
+<input type="hidden" value="" id="hdnSearchText">
+<input id="hdnIsTestNet" value="False" type="hidden">
+<div class="input-group-append">
+<button class="btn btn-primary" type="submit">
+<img src="./images/search_small.png" heignt=20 style="width: 20px; height:20px;">
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</header>
+<!-- END HEADER -->
+<!-- ============================================================================================================================================= -->
+
+<main id="content" role="main">
+<input type="hidden" name="hdnAgeText" id="hdnAgeText" value="Age">
+<input type="hidden" name="hdnDateTimeText" id="hdnDateTimeText" value="Date Time (UTC)">
+<input type="hidden" name="hdnAgeTitle" id="hdnAgeTitle" value="Click to show Age Format">
+<input type="hidden" name="hdnDateTimeTitle" id="hdnDateTimeTitle" value="Click to show Datetime Format">
+
+
+<!-- ============================================================================================================================================= -->
+<!-- CONTENT BLOCK INFO -->
+<div class="d-lg-flex">
+<div class="container d-lg-flex align-items-lg-center space-2 space-sm-3 space-lg-0">
+<div class="w-lg-80 mx-lg-auto">
+<div class="card">
+
+<div class="position-relative bg-dark space-1 space-md-2 p-4 px-md-7 px-md-9 rounded-lg">
+<h1 class="text-white">Terms of Service</h1>
+<p class="text-white-70">Last updated: August 1st, 2021</p>
+
+<figure class="position-absolute right-0 bottom-0 left-0 mb-n1">
+<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1" width="100%" height="32">
+<path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+</svg>
+</figure>
+
+</div>
+
+
+<div class="card-body p-4 p-md-9">
+<div class="mb-5">
+
+<p><strong>PLEASE READ THESE TERMS OF SERVICE CAREFULLY.</strong></p>
+<p>BY ACCESSING OR USING OUR SERVICES, YOU AGREE TO BE BOUND BY THESE TERMS OF SERVICE AND ALL TERMS INCORPORATED BY REFERENCE.</p>
+<p>These Terms of Service and any terms expressly incorporated herein (“Terms”) apply to your access to and use of all services (our “Services”) provided by ToroCorp (“Company,” “we,” or “us”).</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>1. ELIGIBILITY</h5>
+</div>
+
+
+<p>You represent and warrant that you: (a) are of legal age to form a binding contract; (b) have not previously been suspended or removed from using our Services; and (c) have full power and authority to enter into this agreement and in doing so will not violate any other agreement to which you are a party.</p>
+<p>If you are registering to use the Services on behalf of a legal entity, you further represent and warrant that (i) such legal entity is duly organized and validly existing under the applicable laws of the jurisdiction of its organization, and (ii) you are duly authorized by such legal entity to act on its behalf.</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>2. ACCOUNT REGISTRATION</h5>
+</div>
+
+
+<p>You must create an account with Company to access the Services (“Account”). When you create an Account, you agree to: <br><br>
+(a) create a strong password that you do not use for any other website or online service; <br>
+(b) provide accurate and truthful information; <br>
+(c) maintain and promptly update your Account information; <br>
+(d) maintain the security of your Account by protecting your Account password and restricting access to your computer and your Account; <br>
+(e) promptly notify us if you discover or otherwise suspect any security breaches related to your Account; and <br>
+(f) take responsibility for all activities that occur under your Account and accept all risks of any authorized or unauthorized access to your Account, to the maximum extent permitted by law.
+</p>
+<p>When you create an Account, we assign you an account identifier that you must retain to access your Account.</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>3. DISCONTINUANCE OF SERVICES</h5>
+</div>
+
+
+<p>We may, in our sole discretion and without liability to you, with or without prior notice and at any time, modify or discontinue, temporarily or permanently, any portion of our Services.</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>4. ASSUMPTION OF RISK</h5>
+</div>
+
+
+<p>You acknowledge and agree that there are risks associated with utilizing an Internet-based service including, but not limited to, the risk of failure of hardware, software and Internet connections, the risk of malicious software introduction, and the risk that third parties may obtain unauthorized access to information stored within your Account.</p>
+<p>You acknowledge and agree that Company will not be responsible for any communication failures, disruptions, errors, distortions or delays you may experience when using the Services, however caused. Company takes no responsibility for and will not be liable for any losses, damages or claims arising from the use of our Services, including, but not limited to, any losses, damages or claims arising from: <br><br>
+(a) passwords being "Bruteforced", <br>
+(b) server failure or data loss, <br>
+(c) forgotten passwords, <br>
+(d) corrupted wallet files, <br>
+(e) incorrectly constructed transactions or mistyped Toronet addresses; or <br>
+(f) unauthorized access to mobile applications, <br>
+(g)"phishing," viruses, third-party attacks or any other unauthorized third-party activities.
+</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>5. THIRD-PARTY SERVICES AND CONTENT</h5>
+</div>
+
+
+<p>In using our Services, you may view content or utilize services provided by third parties, including links to web pages and services of such parties (“Third-Party Content”).</p>
+<p>We do not control, endorse or adopt any Third-Party Content and will have no responsibility for Third-Party Content, including, without limitation, material that may be misleading, incomplete, erroneous, offensive, indecent or otherwise objectionable in your jurisdiction.</p>
+<p>In addition, your business dealings or correspondence with such third parties are solely between you and the third parties. We are not responsible or liable for any loss or damage of any sort incurred as the result of any such dealings, and you understand that your use of Third-Party Content, and your interactions with third parties, is at your own risk.</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>6. ACCEPTABLE USE</h5>
+</div>
+
+
+<p>When accessing or using the Services, you agree that you will not violate any law, contract, intellectual property or other third-party right or commit a tort, and that you are solely responsible for your conduct while using our Services. You must not:</p>
+<ul class="text-secondary">
+<li><p>Use our Services in any manner that could interfere with, disrupt, negatively affect or inhibit other users from fully enjoying our Services, or that could damage, disable, overburden or impair the functioning of our Services in any manner;</p></li>
+<li><p>Use our Services to pay for, support or otherwise engage in any illegal activities, including, but not limited to illegal gambling, fraud, money-laundering, or terrorist activities;</p></li>
+<li><p>Use any <b>robot, spider, crawler, scraper</b> or other automated means or interface not provided by us to access our Services or to extract data;</p></li>
+<li><p>Engage in <b>Automated Data Collection (scraping)</b> unless such Automated Data Collection is confined solely to search indexing for display on the Internet;</p></li>
+<li><p>Use or attempt to use another user’s account without authorization;</p></li>
+<li><p>Attempt to circumvent any content filtering techniques we employ, or attempt to access any service or area of our Services that you are not authorized to access;</p></li>
+<li><p>Introduce to the Services any virus, trojan worms, logic bombs or other harmful material; </p></li>
+<li><p>Develop any third-party applications that interact with our Services without our prior written consent;</p></li>
+<li><p>Provide false, inaccurate, or misleading information; and</p></li>
+<li><p>Encourage or induce any third party to engage in any of the activities prohibited under this Section.</p></li>
+</ul>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>7. USER-GENERATED CONTENT</h5>
+</div>
+
+
+<p>7.1. <b>Responsibility for User-Generated Content</b> - You are solely responsible for the content of, and for any harm resulting from, any User-Generated Content that you post, upload, link to or otherwise make available via the Service, regardless of the form of that Content. We are not responsible for any public display or misuse of your User-Generated Content. We have the right (though not the obligation) to refuse or remove any User-Generated Content that, in our sole discretion, violates any Toronet terms or policies. </p>
+<p>7.2. <b>Ownership of Content &amp; Right to Post</b> - If you're posting anything you did not create yourself or do not own the rights to, you agree that you are responsible for any Content you post; that you will only submit Content that you have the right to post; and that you will fully comply with any third party licenses relating to Content you post.</p>
+<p>7.3. <b>License Grant to Us</b> - We need the legal right to do things like host Your Content, publish it, and share it. You grant us and our legal successors the right to store, parse, and display your content, and make incidental copies as necessary to render the Website and provide the service.</p>
+<p>7.4. <b>Moral Rights</b> - You retain all moral rights to Your Content that you upload, publish, or submit to any part of the Service, including the rights of integrity and attribution. However, you waive these rights and agree not to assert them against us, to enable us to reasonably exercise the rights granted in Section 7.3.</p>
+<p>7.5. To the extent this agreement is not enforceable by applicable law, you grant Toronet the rights we need to use your content without attribution and to make reasonable adaptations of your content as necessary to render the Website and provide the service.</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>8. COPYRIGHTS AND OTHER INTELLECTUAL PROPERTY RIGHTS</h5>
+</div>
+
+
+<p>Unless otherwise indicated by us, all copyright and other intellectual property rights in all content and other materials contained on our website or provided in connection with the Services, including, without limitation,
+the Company or Company logo and all designs, text, graphics, pictures, information, data, software, sound files, other files and the selection and arrangement thereof (collectively, “Company Materials”) are the proprietary property of Company or our licensors or suppliers
+and are protected by copyright laws and other intellectual property rights laws.</p>
+<p>Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited.
+Excerpts and links may be used, provided that full and clear credit is given to Toronet.org with appropriate and specific direction to the original content.
+</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>9. TRADEMARKS</h5>
+</div>
+
+
+<p>“ToroCorp” the Company logo, and any other Company product or service names, logos or slogans that may appear on our Services are trademarks of Company and may not be copied, imitated or used, in whole or in part, without our prior written permission.</p>
+<p>You will not use any trademark, product or service name of Company without our prior written permission, including without limitation any metatags or other “hidden text” utilizing any trademark, product or service name of Company.
+In addition, the look and feel of our Services, including all page headers, custom graphics, button icons and scripts, is the service mark, trademark and/or trade dress of Company and may not be copied, imitated or used, in whole or in part, without our prior written permission.
+</p>
+<p>All other trademarks, registered trademarks, product names and company names or logos mentioned through our Services are the property of their respective owners.
+Reference to any products, services, processes or other information, by name, trademark, manufacturer, supplier or otherwise does not constitute or imply endorsement, sponsorship or recommendation by us.
+</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>10. SUSPENSION; TERMINATION</h5>
+</div>
+
+
+<p>In the event of any Force Majeure Event, breach of these Terms, or any other event that would make provision of the Services commercially unreasonable for Company, we may, in our discretion and without liability to you, with or without prior notice, suspend your access to all or a portion of our Services.</p>
+<p>We may terminate your access to the Services in our sole discretion, immediately and without prior notice, and delete or deactivate your Account and all related information and files in such account without liability to you, including, for instance, in the event that you breach any term of these Terms.</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<a name="cookiestatement"> <br></a>
+<h5>11. COOKIE STATEMENT</h5>
+</div>
+
+
+<p>This site uses cookies. Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site. Cookies are typically stored on your computer's hard drive.</p>
+<p>Information collected from cookies is used by us to evaluate the effectiveness of our Site, analyze trends, and manage the platform.
+The information collected from cookies allows us to determine such things as which parts of our Site are most visited and difficulties our visitors may experience in accessing our Site.
+With this knowledge, we can improve the quality of your experience on the platform by recognizing and delivering more of the most desired features and information, as well as by resolving access difficulties.
+We also use cookies and/or a technology known as web bugs or clear gifs, which are typically stored in emails to help us confirm your receipt of, and response to, our emails and to provide you with a more personalized experience when using our Site.
+</p>
+<p>We also use third party service provider(s), to assist us in better understanding the use of our Site. Our service provider(s) will place cookies on the hard drive of your computer and will receive information that we select that will educate us on such things as how visitors navigate around our site, what pages are browsed and general transaction information.
+Our service provider(s) analyses this information and provides us with aggregate reports. The information and analysis provided by our service provider(s) will be used to assist us in better understanding our visitors' interests in our Site and how to better serve those interests.
+The information collected by our service provider(s) may be linked to and combined with information that we collect about you while you are using the platform.
+Our service provider(s) is/are contractually restricted from using information they receive from our Site other than to assist us.
+</p>
+<p>Your continued use of this site, as well as any subsequent usage, will be interpreted as your consent to cookies being stored on your device.</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>12. PRIVACY POLICY</h5>
+</div>
+
+
+<p>Please see our detailed <a href="./privacyPolicy"><strong>Privacy Policy</strong></a>.</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>13. DISCLAIMER OF WARRANTIES</h5>
+</div>
+
+
+<p>(a) TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, AND EXCEPT AS EXPRESSLY PROVIDED TO THE CONTRARY IN A WRITING BY US, OUR SERVICES ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW.
+WE EXPRESSLY DISCLAIM, AND YOU WAIVE, ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT AS TO OUR SERVICES, INCLUDING THE INFORMATION, CONTENT AND MATERIALS CONTAINED THEREIN.
+</p>
+<p>(b) YOU ACKNOWLEDGE THAT INFORMATION YOU STORE OR TRANSFER THROUGH OUR SERVICES MAY BECOME IRRETRIEVABLY LOST OR CORRUPTED OR TEMPORARILY UNAVAILABLE DUE TO A VARIETY OF CAUSES, INCLUDING SOFTWARE FAILURES, PROTOCOL CHANGES BY THIRD PARTY PROVIDERS,
+INTERNET OUTAGES, FORCE MAJEURE EVENT OR OTHER DISASTERS, SCHEDULED OR UNSCHEDULED MAINTENANCE, OR OTHER CAUSES EITHER WITHIN OR OUTSIDE OUR CONTROL.
+YOU ARE SOLELY RESPONSIBLE FOR BACKING UP AND MAINTAINING DUPLICATE COPIES OF ANY INFORMATION YOU STORE OR TRANSFER THROUGH OUR SERVICES.
+</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>14. LIMITATION OF LIABILITY</h5>
+</div>
+
+
+<p>EXCEPT AS OTHERWISE REQUIRED BY LAW, IN NO EVENT SHALL COMPANY, OUR DIRECTORS, MEMBERS, EMPLOYEES OR AGENTS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY OTHER DAMAGES OF ANY KIND,
+INCLUDING BUT NOT LIMITED TO LOSS OF USE, LOSS OF PROFITS OR LOSS OF DATA, WHETHER IN AN ACTION IN CONTRACT, TORT (INCLUDING BUT NOT LIMITED TO NEGLIGENCE) OR OTHERWISE,
+ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE USE OF OR INABILITY TO USE OUR SERVICES OR THE COMPANY MATERIALS, INCLUDING WITHOUT LIMITATION ANY DAMAGES CAUSED BY OR RESULTING FROM RELIANCE BY ANY USER ON ANY INFORMATION OBTAINED FROM COMPANY,
+OR THAT RESULT FROM MISTAKES, OMISSIONS, INTERRUPTIONS, DELETION OF FILES OR EMAIL, ERRORS, DEFECTS, VIRUSES, DELAYS IN OPERATION OR TRANSMISSION OR ANY FAILURE OF PERFORMANCE,
+WHETHER OR NOT RESULTING FROM A FORCE MAJEURE EVENT, COMMUNICATIONS FAILURE, THEFT, DESTRUCTION OR UNAUTHORIZED ACCESS TO COMPANY’S RECORDS, PROGRAMS OR SERVICES.
+</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>15. INDEMNITY</h5>
+</div>
+
+
+<p>You agree to defend, indemnify and hold harmless Company (and each of our officers, directors, members, employees, agents and affiliates)
+from any claim, demand, action, damage, loss, cost or expense, including without limitation reasonable attorneys’ fees, arising out or relating to: <br><br>
+(a) your use of, or conduct in connection with, our Services; <br>
+(b) any Feedback you provide; <br>
+(c) your violation of these Terms; or <br>
+(d) your violation of any rights of any other person or entity.
+</p>
+
+</div>
+<div class="mb-5">
+
+<div class="mb-3">
+<h5>16. MISCELLANEOUS</h5>
+</div>
+
+
+<p>16.1. <b>Entire Agreement; Order of Precedence.</b> These Terms contain the entire agreement, and supersede all prior and contemporaneous understandings between the parties regarding the Services.
+These Terms do not alter the terms or conditions of any other electronic or written agreement you may have with Company for the Services or for any other Company product or service or otherwise.
+In the event of any conflict between these Terms and any other agreement you may have with Company, the terms of that other agreement will control only if these Terms are specifically identified and declared to be overridden by such other agreement.
+</p>
+<p>16.2. <b>Amendment.</b> We reserve the right to make changes or modifications to these Terms from time to time, in our sole discretion.
+Amended Terms will become effective immediately on the date they are posted to the Services unless we state otherwise via our notice of such amended Terms.
+Any amended Terms will apply prospectively to use of the Services after such changes become effective.
+Your continued use of the Services following the effective date of such changes will constitute your acceptance of such changes.
+If you do not agree to any amended Terms, you must discontinue using the Services.
+</p>
+<p>16.3. <b>Waiver.</b> Our failure or delay in exercising any right, power or privilege under these Terms will not operate as a waiver thereof.</p>
+<p>16.4. <b>Severability.</b> The invalidity or unenforceability of any of these Terms will not affect the validity or enforceability of any other of these Terms, all of which will remain in full force and effect.</p>
+<p>16.5. <b>Force Majeure Events.</b> Company will not be liable for any loss or damage arising from any event beyond Company’s reasonable control, including,
+but not limited to, flood, extraordinary weather conditions, earthquake, or other act of God, fire, war, insurrection, riot, labor dispute, accident, action of government, communications, power failure, or equipment or software malfunction
+(each, a “Force Majeure Event”).
+</p>
+<p>16.6. <b>Assignment.</b> You may not assign or transfer any of your rights or obligations under these Terms without prior written consent from Company, including by operation of law or in connection with any change of control.
+Company may assign or transfer any or all of its rights under these Terms, in whole or in part, without obtaining your consent or approval.
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- END CONTENT PAGE COUNT -->
+
+<!-- ============================================================================================================================================= -->
+
+<!-- FOOTER -->
+<footer class="bg-dark py-4" style="background-image: url(/images/svg/components/abstract-shapes-20.svg?v=2);">
+    <div class="container">
+    <div class="row justify-content-md-between font-size-1 py-2">
+    <div class="col-lg-3 mb-4 mb-lg-0">
+    <div class="d-flex h-100 flex-column">
+    <div class="d-flex align-items-center mb-4">
+    <img width="25" src="./images/toro-logo.png" alt="Toronet Logo">
+    <span class="h5 text-white mb-0 ml-3">Powered by Toronet</span>
+    </div>
+    <p class="text-white">
+    Toronet Explorer is a Block Explorer and Analytics Platform for the Toronet Blockchain
+    </p>
+    
+    <div class="d-flex align-items-center mb-4">
+    <span class="d-none d-md-inline-block">
+    <button type="button" class="btn btn-xss btn-soft-light text-nowrap d-flex align-items-center mr-2" onclick="addNetwork(&#39;coming soon&#39;);">
+    <img class="mr-1" width="15" src="./home_files/metamask.svg" alt="Metamask"> Add Toro Network
+    </button>
+    </span>
+    <a class="btn btn-xss btn-soft-light mr-2" href="emailto:info@toronet.org">
+    <i class="fa fa-cogs mr-1"></i>Preferences
+    </a>
+    <button id="darkModaBtn" type="button" data-toggle="tooltip" data-title="Day/Night Mode" class="btn btn-sm btn-icon btn-soft-light" data-original-title="" title="">
+    <i id="darkModaBtnIcon" class="fa fa-moon"></i></button>
+    </div>
+    
+    </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+    <h4 class="h6 text-white heading-border">Organization</h4>
+    <ul class="list-group list-group-sm list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+    <li><a class="list-group-item" href="emailto:info@toronet.org">Advertise<sup><span class="badge badge-success font-size-default ml-1">New</span></sup></a></li>
+    <li><a class="list-group-item" href="emailto:info@toronet.org">Delegate to ToroCorp<sup><span class="badge badge-info font-size-default ml-1">Staking</span></sup></a></li>
+    <li><a class="list-group-item" href="emailto:info@toronet.org">Contact Us</a></li>
+    <li><a class="list-group-item" href="emailto:info@toronet.org">Brand Assets</a></li>
+    <li><a class="list-group-item" href="./termsofservice.html">Terms of Service</a></li>
+    </ul>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+    <h4 class="h6 text-white heading-border">Community</h4>
+    <ul class="list-group list-group-sm list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+    <li><a class="list-group-item" href="./apis.html">Developer APIs</a></li>
+    <li><a class="list-group-item" target="_blank" href="emailto:info@toronet.org">Knowledge Base</a></li>
+    <li><a class="list-group-item" rel="nofollow noopener" target="_blank" href="emailto:info@toronet.org">Network Status</a></li>
+    <li><a class="list-group-item" rel="nofollow noopener" target="_blank" href="emailto:info@toronet.org">Learn About Toronet</a></li>
+    </ul>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+    <h4 class="h6 text-white heading-border">Products</h4>
+    <ul class="list-group list-group-sm list-group-transparent list-group-white list-group-flush list-group-borderless mb-0">
+    <li><a class="list-group-item" href="https://explorer.toronet.org/" title="Toronet Explorer" target="_blank">Toronet Explorer</a></li>
+    <li><a class="list-group-item" href="https://testexplorer.toronet.org" title="Toronet Testnet Explorer" target="_blank">Toronet Testnet Explorer</a></li>
+    </ul>
+    </div>
+    </div>
+    
+    <hr class="opacity-md">
+    <div class="row justify-content-between align-items-center font-size-1">
+    <div class="col-md-6 mb-2 mb-md-0 d-flex">
+    <p class="mb-0 text-white">Toronet Explorer © 2021 
+    <span class="mx-1">|</span> ⛏ Built by the team behind <a class="text-primary" href="https://toronet.org/" target="_blank"><b>Toronet Site</b></a>
+    </p>
+    </div>
+    <div class="col-md-6 text-md-right">
+    <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+    <a class="btn btn-sm btn-icon btn-soft-light btn-pill" href="emailto:info@toronet.org" data-toggle="tooltip" data-placement="top" title="" data-original-title="Contact Us">
+    <i class="far fa-envelope btn-icon__inner"></i>
+    </a>
+    </li> 
+    <li class="list-inline-item">
+    <a class="btn btn-sm btn-icon btn-soft-light btn-pill" href="https://twitter.com/Toronet" rel="nofollow noopener" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+    <i class="fab fa-twitter btn-icon__inner"></i>
+    </a>
+    </li>
+    <li class="list-inline-item">
+    <a class="btn btn-sm btn-icon btn-soft-light btn-pill" href="https://medium.com/@Toronet" rel="nofollow noopener" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="Medium">
+    <i class="fab fa-medium btn-icon__inner"></i>
+    </a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </footer>
+
+    
+    <!--END FOOTER -->
+    <!-- ============================================================================================================================================= -->
+    
+
+<div id="divcookie" class="fixed-bottom mx-3" style="display: block;">
+<div class="alert alert-light border shadow-sm p-3" role="alert">
+<div class="d-flex justify-content-center align-items-center">
+<span>
+<p class="text-dark mr-3 mb-2 mb-md-0">
+<i class="far fa-cookie-bite text-secondary mr-1"></i>This website <a href="./termsofservice.html#cookiestatement" target="_blank">uses cookies to improve your experience</a> and has an updated <a href="./privacyPolicy.html">Privacy Policy</a>.
+</p>
+</span>
+<div>
+<button id="btnCookie" class="btn btn-sm btn-primary text-nowrap py-1" data-dismiss="alert" aria-label="Close">Got It</button>
+</div>
+</div>
+</div>
+</div>
+<a class="js-go-to u-go-to animated" href="./blocks.html" data-position="{&quot;bottom&quot;: 20, &quot;right&quot;: 15 }" data-type="fixed" data-offset-top="400" data-compensation="#header" data-show-effect="slideInUp" data-hide-effect="slideOutDown" style="display: inline-block; position: fixed; opacity: 0; bottom: 20px; right: 15px;">
+<span class="fa fa-arrow-up u-go-to__inner"></span>
+</a>
+<script src="./home_files/jquery-ui.min.js.download"></script>
+<script src="./home_files/jquery-migrate.min.js.download"></script>
+<script src="./home_files/popper.min.js.download"></script>
+<script src="./home_files/bootstrap.min.js.download"></script>
+
+<script src="./home_files/hs.megamenu.js.download"></script>
+<script src="./home_files/jquery.mCustomScrollbar.concat.min.js.download"></script>
+<script src="./home_files/jquery.cubeportfolio.min.js.download"></script>
+
+<script src="./home_files/hs.core.js.download"></script>
+<script src="./home_files/hs.header.js.download"></script>
+<script src="./home_files/hs.unfold.js.download"></script>
+<script src="./home_files/hs.malihu-scrollbar.js.download"></script>
+<script src="./home_files/hs.focus-state.js.download"></script>
+<script src="./home_files/hs.go-to.js.download"></script>
+<script src="./home_files/hs.cubeportfolio.js.download"></script>
+<script src="./home_files/combine-js-bottom2.js.download"></script>
+
+<script>
+        $(window).on('load', function () {
+            // initialization of HSMegaMenu component
+            $('.js-mega-menu').HSMegaMenu({
+                event: 'hover',
+                pageContainer: $('.container'),
+                breakpoint: 767.98,
+                hideTimeOut: 0
+            });
+            myfn_subscribeNewsletter.startFn("#btnSubscribeNewsletter","#signupSrEmail")
+        });
+
+        $(document).on('ready', function () {
+            // initialization of header
+            $.HSCore.components.HSHeader.init($('#header'));
+
+            // initialization of unfold component
+            $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+                afterOpen: function () {
+                    $(this).find('input[type="search"]').focus();
+                }
+            });
+
+            // initialization of malihu scrollbar
+            $.HSCore.components.HSMalihuScrollBar.init($('.js-scrollbar'));
+      
+            // initialization of focus state
+            $.HSCore.components.HSFocusState.init();
+
+            // initialization of go to
+            $.HSCore.components.HSGoTo.init('.js-go-to');
+
+            // initialization of cubeportfolio
+            //$.HSCore.components.HSCubeportfolio.init('.cbp');
+        });
+    </script>
+<script type="text/javascript">
+        var sid = 'c338f7d07831ec3d097df1610f4d2ede';
+        var strGlobal = sessionStorage.getItem("ShowAs");
+        var cookieconsent = getCookie("toroscan_cookieconsent");
+        if (cookieconsent !== "True") {
+            document.getElementById("divcookie").style.display = "block";
+        };
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        $("#btnCookie").click(function () {
+            $("#divcookie").fadeOut("slow", function () {
+                var d = new Date();
+                d.setTime(d.getTime() + (1095 * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = "toroscan_cookieconsent=True" + ";" + expires + ";path=/";;
+            });
+        });
+        function handleSearchText(data) {
+            searchAddress = false;
+            if ($("txtSearchInput").val() == "") {
+                $("#hdnSearchText").val("");                    
+            }
+        }
+    </script>
+<script src="./home_files/web3-utils.min.js.download"></script>
+<script src="./home_files/web3-eth.min.js.download"></script>
+<script src="./home_files/web3-providers-http.min.js.download"></script>
+<script type="text/javascript">
+        var eth;
+        var isTestnet = 'false';
+
+        async function addNetwork(type) {
+            
+            if (type === 'web3') {
+                if (typeof ethereum !== 'undefined') {
+                    eth = new Web3Eth(ethereum);
+                } else if (typeof web3 !== 'undefined') {
+                    eth = new Web3Eth(web3.givenProvider);
+                } else {
+                    eth = new Web3Eth(ethereum);
+                }                
+            }            
+
+            if (typeof eth !== 'undefined') {
+                var network = 0;
+                network = await eth.net.getId();
+                netID = network.toString();
+                var params;
+                if (isTestnet == "false") {
+                    if (netID == "56") {
+                        alert("Toronet Network has already been added to Metamask.");
+                        return;
+                    } else {
+                        params = [{
+                            chainId: '0x38',
+                            chainName: 'Toronet Mainnet',
+                            nativeCurrency: {
+                                name: 'TORO',
+                                symbol: 'TORO',
+                                decimals: 18
+                            },
+                            rpcUrls: ['https://toro-dataseed1.toronet.org/'],
+                            blockExplorerUrls: ['https://explorer.toronet.org/']
+                        }]
+                    }
+                } else {
+                    if (netID == "97") {
+                        alert("Tornet Test Network has already been added to Metamask.");
+                        return;
+                    } else {
+                        params = [{
+                            chainId: '0x61',
+                            chainName: 'Toronet Testnet',
+                            nativeCurrency: {
+                                name: 'tTORO',
+                                symbol: 'tTORO',
+                                decimals: 18
+                            },
+                            rpcUrls: ['https://data-seed-pretoro-1-s1.toronet.org:8545/'],
+                            blockExplorerUrls: ['https://testexplorer.toronet.org/']
+                        }]
+                    }
+                }
+
+                window.ethereum.request({ method: 'wallet_addEthereumChain', params })
+                    .then(() => console.log('Success'))
+                    .catch((error) => console.log("Error", error.message));
+            } else {
+                alert('Unable to locate a compatible web3 browser!');
+            }
+        }
+</script>
+<script type="text/javascript" src="./home_files/datatables.min.js.download"></script>
+<script type="text/javascript" src="./home_files/commonjs.js.download"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            onDocumentReady();
+            renderDataTable();
+            $("[data-toggle='tooltip']").tooltip(); 
+        });      
+
+        function renderDataTable() {
+            var table = $("#datatable").DataTable({
+                dom: '<"top d-md-flex justify-content-between mb-3"<"text-secondary d-flex"i><"pagination-sm d-flex"p>>rt<"bottom d-md-flex justify-content-between"<"text-secondary d-flex"l><"pagination-sm d-flex"p>><"clear">',
+                language: {
+                    paginate: {
+                        next: '<i class="fa fa-chevron-right small"></i>',
+                        previous: '<i class="fa fa-chevron-left small"></i>'
+                    },
+                    lengthMenu: "Show _MENU_ Records",
+                    info: "A total of _MAX_ records found"
+                },
+                searching: false,
+                pagingType: 'full',
+                columnDefs: [
+                    { orderable: false, targets: '_all' }
+                ],
+                processing: true,
+                serverSide: true,
+                //pageLength: ,
+                
+                deferLoading: "",
+                ajax: {
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "/blocks.aspx/GetBlocksBySubLabel",
+                    data: function (d) {
+                        var labelModel = generateLabelModel();
+
+                        if (currentLength != d.length) {
+                            d.start = 0;
+                            currentLength = d.length;
+                            resetPage = true;
+                        }
+
+                        return JSON.stringify({ dataTableModel: d, labelModel: labelModel });
+                    },
+                    dataType: "json",
+                    dataFilter: function (res) {
+                        var parsed = JSON.parse(res);
+                        var morp = parsed.d;
+
+                        return JSON.stringify(morp);
+                    }
+                },
+                columns: [
+                    { data: "block" },
+                    { data: "age" },
+                    { data: "txn" },
+                    { data: "uncles" },
+                    { data: "miner" },
+                    { data: "gasUsed" },
+                    { data: "gasLimit" },
+                    { data: "avgGasPrice" },
+                    { data: "reward" }
+                ],
+                drawCallback: function (settings) {
+                    var api = this.api();
+                    var json = api.ajax.json();
+                    if (!json) {
+                        var currentPageDisp = "1";
+
+                        //reload state if querystring is available
+                        var urlParams = new URLSearchParams(window.location.search);
+                        var existLength = urlParams.get('size');
+                        if (existLength) {
+                            api.page.len(existLength);
+                            currentLength = parseInt(existLength)
+
+                            var existStart = urlParams.get('start');
+                            if (!existStart) {
+                                existStart = 0
+                            }
+                                currentPage = Math.floor(existStart / existLength);
+                                api.page(currentPage);
+                                currentPageDisp = currentPage + 1;
+                        }
+
+                        var totalPage = "";
+                        var totalRecord = "";
+
+                        if (totalRecord < 10) {
+                            $(".bottom").remove();
+                        }
+
+                        $('#datatable_length .custom-select.custom-select-sm.form-control.form-control-sm').removeAttr("class").addClass("custom-select custom-select-xs mx-2");
+                        $('.paginate_button.previous').after("<li class='page-item disabled'><span class='page-link'>Page <strong class='font-weight-medium'>" + currentPageDisp + "</strong> of <strong class='font-weight-medium'>" + totalPage + "</strong></span></li>");
+                        return;
+                    }
+
+                    $('.paginate_button.previous').after("<li class='page-item disabled'><span class='page-link'>Page <strong class='font-weight-medium'>" + json.currentPage + "</strong> of <strong class='font-weight-medium'>" + json.totalPage + "</strong></span></li>");
+
+                    if (resetPage) {
+                        this.api().page(0);
+                        resetPage = false;
+                    }
+
+                    //get page info
+                    var pageInfo = this.api().page.info();
+                    if (pageInfo.length) {
+                        queryStringDictionary["length"] = pageInfo.length;
+                    }
+
+                    if (pageInfo.start !== undefined) {
+                        queryStringDictionary["start"] = pageInfo.start;
+                    }
+
+                    updateUrl();
+                    $('[data-toggle="tooltip"]').tooltip()
+                }
+
+            });
+        }
+
+        var resetPage = false;
+        var queryStringDictionary = {};
+        var currentLength = 0;
+
+        function updateUrl() {
+            var queryString = '';
+
+            var length = queryStringDictionary["length"];
+            if (length) {
+                if (length < 0) {
+                    length = 7
+                }
+                queryString += "&size=" + length;
+            }
+
+            var start = queryStringDictionary["start"];
+            if (start !== undefined) {
+                queryString += "&start=" + start;
+            }
+
+            var baseUrl = window.location.href.split('?')[0];
+            history.pushState("", document.title, baseUrl + "?" + queryString);
+        }
+
+        function generateLabelModel() {
+            var id = $('#hdnId').val();
+            var label = $('#hdnLabelFilter').val();
+            var subCategoryId = $('.nav-link.active').attr('val');
+
+            return { id: id, label: label, subCategoryId: subCategoryId };
+        }
+    </script>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'67edccb59b9f40de',m:'3407475562380156019382e8e501cbd01cef713e-1628982029-1800-AcO7acJQ68pfTJ1TxmwGbfvxKgqEJdmZOv4AGBzQZ8YBodZhDSGxIUL0BibmQ3UdgaGkS3Wxgz7cslEtL+hnzsJJuXpcelNKQAuF2AxoK/wK77jNLW2O/ELVibYZex6a5Q==',s:[0x94da8787c1,0x3bbe165545],}})();</script>
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>
