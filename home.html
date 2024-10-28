@@ -937,7 +937,7 @@
 									class="btn btn-xss btn-soft-light text-nowrap d-flex align-items-center mr-2"
 									onClick="addNetwork();">
 									<img class="mr-1" width="15" src="./home_files/metamask.svg" alt="Metamask"> Add
-									Toro Network
+									Toronet Network
 								</button>
 							</span>
 							<a class="btn btn-xss btn-soft-light mr-2" href="emailto:info@toronet.org">
@@ -1145,47 +1145,45 @@
 	<script src="./home_files/web3-eth.min.js.download"></script>
 	<script src="./home_files/web3-providers-http.min.js.download"></script>
 	<script type="text/javascript">
-		var eth;
-		var isTestnet = 'true';
+		document.addEventListener("DOMContentLoaded", function () {
+			async function addNetwork() {
+				// Check if MetaMask (or another Ethereum provider) is installed and specifically if it's MetaMask
+				if (typeof window.ethereum !== 'undefined' && window.ethereum.isMetaMask) {
+					try {
+						// Request account access if needed
+						await window.ethereum.request({ method: 'eth_requestAccounts' });
 
-		async function addNetwork() {
+						// Define the network parameters for Toronet
+						const toronetNetwork = [{
+							chainId: '0xD431', // '54321' in hexadecimal
+							chainName: 'Toronet Test Network',
+							nativeCurrency: {
+								name: 'TORO',
+								symbol: 'TORO', // Currency symbol
+								decimals: 18 // Standard ERC20 decimal
+							},
+							rpcUrls: ['https://testnet.toronet.org/rpc/'],
+							blockExplorerUrls: ['https://testnet.toronet.org/']
+						}];
 
-
-			alert("Note you must have MetaMAsk installed for this command to have any effect");
-
-			var type = 'web3';
-
-			if (type === 'web3') {
-				eth = new Web3Eth();
+						// Request MetaMask to add the network
+						await window.ethereum.request({
+							method: 'wallet_addEthereumChain',
+							params: toronetNetwork
+						});
+						console.log('Toronet Network added successfully.');
+					} catch (error) {
+						console.error("Failed to add network:", error.message);
+					}
+				} else {
+					// MetaMask not installed or detected
+					alert("Please install or enable MetaMask to add the network.");
+				}
 			}
 
-			//alert ( typeof eth );
-			if (typeof eth !== 'undefined') {
-				//var network = 0;
-				//network = await eth.net.getId();
-				//netID = network.toString();
-
-				const params = [{
-					chainId: '54321',
-					chainName: 'Toronet Test Network',
-					nativeCurrency: {
-						name: 'TORO',
-						symbol: 'TORO',
-						decimals: 18
-					},
-					rpcUrls: ['https://testnet.toronet.org/rpc/'],
-					blockExplorerUrls: ['https://testnet.toronet.org/']
-				}]
-				//alert("here2");
-
-				window.ethereum.request({ method: 'wallet_addEthereumChain', params })
-					.then(() => console.log('Success'))
-					.catch((error) => console.log("Error", error.message))
-				//alert("here3");
-			}
-		}
-
-
+			// Attach function to button click
+			document.querySelector('button[onClick="addNetwork();"]').addEventListener("click", addNetwork);
+		});
 	</script>
 	<script src="./home_files/highcharts.js.download"></script>
 	<script>
